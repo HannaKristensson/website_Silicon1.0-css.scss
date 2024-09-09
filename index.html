@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8"/>
     <meta namne="viewport" content="with-device-width, initial-scale-1.0">
-    <link rel="stylesheet" href="css/test2.css">
+    <link rel="stylesheet" href="css/stylesheet.css">
     <!-- Icons Awesome, licens -->
      <link rel="stylesheet" href="http://kit.fontawesome.com/a576612222.css" crossorigin="anonymus">
      <!-- font Manrope -->
@@ -22,9 +22,33 @@
     <header>
         <div class="container">
 
-            <a href="index.html"><img src="photo/logotype.svg" alt="Silicon Logotype"></a>
+            <a id="logo" href="index.html">
+                <img src="images/logotype.svg" alt="Silicon Logotype">
+            </a>
             
-<p>hej</p>
+            <div id="break"></div>
+            
+            <nav id="main-menu" class="navbar"">
+                <a class="nav-link" href="#">Features</a>
+            </nav>
+
+            <div id="btn-toggle-switch" class="btn-toggle-switch">
+                <span class="label">Dark mode</span>
+                <label for="darkmode-switch" class="toggle-switch">
+                    <input id="darkmode-switch" type="checkbox">
+                    <span class="slider round"></span>
+                </label>
+            </div>
+
+            <a id="sign-in" href="#" class="btn-primary">
+                <img src="images/user-icon.svg" alt="">
+                <span>Sign in / up</span>
+            </a>
+
+            <button class="btn-mobile">
+                <i class="fa-sharp fa-light fa-bars"></i>
+            </button>
+
         </div>
     </header>
 
