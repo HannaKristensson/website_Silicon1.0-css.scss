@@ -4,6 +4,7 @@
     --color-gray900: #9397AD;
     --color-gray800: #33354D;
     --color-gray600: #9397AD;
+    --color-gray300: #E2E5F1;
     --color-white: #fff;
 
     --container-padding: 1rem;
@@ -196,6 +197,26 @@ header .container {
     padding-bottom: 0.5rem;
 }
 
+#brands {
+    display: none;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.brand-box {
+    border: 1px solid var(--color-gray300);
+    border-radius: 8px;
+    height: 6.25rem;
+    width: 12.25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+
+
 footer {
     font-size: 14px;
     color: var(--color-gray600);
@@ -211,6 +232,8 @@ footer {
 
 
 
+
+
 @media (min-width : 768px) {
     .container {
         max-width: 720px;
@@ -222,6 +245,26 @@ footer {
 
     header .container {
         gap: 3rem;
+    }
+
+    #brands {
+        display: block;
+        
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+
+    .brand-box {
+        width: 10rem;
+        height: 6rem;
+    }
+
+    #brand5, #brand6 {
+        display: none;
     }
 
     footer {
@@ -254,5 +297,14 @@ footer {
 
     .btn-mobile {
         display: none;
+    }
+
+    .brand-box {
+        height: 6.25rem;
+    width: 12.25rem;
+    }
+
+    #brand5, #brand6 {
+        display: flex;
     }
 }
