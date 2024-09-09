@@ -1,0 +1,25 @@
+:root {
+    --color-dark: #0B0F19;
+    --color-primary: #6366F1;
+    --color-gray: #9397AD;
+    --color-white: #fff;
+
+    --container-padding: 1rem;
+    --transition-time: all 0.2s;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body, section, div, header, footer, main, aside, nav, blockquote, p, span {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 16px;
+    text-align: center;
+}
