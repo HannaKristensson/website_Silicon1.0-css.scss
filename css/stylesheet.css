@@ -3,6 +3,7 @@
     --color-primary: #6366F1;
     --color-gray900: #9397AD;
     --color-gray800: #33354D;
+    --color-gray600: #9397AD;
     --color-white: #fff;
 
     --container-padding: 1rem;
@@ -195,6 +196,20 @@ header .container {
     padding-bottom: 0.5rem;
 }
 
+footer {
+    font-size: 14px;
+    color: var(--color-gray600);
+    text-align: center;
+
+    .container {
+        display: flex;
+        flex-direction: column;
+
+    }
+    
+}
+
+
 
 @media (min-width : 768px) {
     .container {
@@ -207,6 +222,13 @@ header .container {
 
     header .container {
         gap: 3rem;
+    }
+
+    footer {
+        /* .container {
+            display: flex;
+            flex-direction: column;
+        } */
     }
 }
 
@@ -222,7 +244,7 @@ header .container {
     }
 
     header .container {
-        grid-template-columns: auto 1fr auto auto auto;
+        grid-template-columns: auto 1fr auto auto auto auto;
         gap: 3rem;
     }
 
@@ -232,9 +254,5 @@ header .container {
 
     .btn-mobile {
         display: none;
-    }
-
-    .navbar {
-        display: block;
     }
 }
