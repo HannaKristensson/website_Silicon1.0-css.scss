@@ -59,13 +59,12 @@ color: var(--color-breadtext)
 
 button {
     border: none;
+    cursor: pointer;
 }
 
 
 .container {
     width: 100vw;
-    padding-left: var(--container-padding);
-    padding-right: var(--container-padding);
     margin-left: auto;
     margin-right: auto;
 }
@@ -75,9 +74,7 @@ button {
     place-items: center;
 }
 
-
-.page {
-    height:90vh;
+.backg-color {
     background: rgb(99,102,241);
     background: linear-gradient(0deg, rgba(99,102,241,0.1) 0%, rgba(218,70,239,0.05) 42%, rgba(241,244,253,0.07) 83%);
 }
@@ -88,6 +85,8 @@ button {
 header .container {
     display: grid;
     align-items: center;
+    padding-left: var(--container-padding);
+    padding-right: var(--container-padding);
     grid-template-columns: 2fr 2fr auto auto;
     gap: 1.5rem;
     padding-top: 0.5rem;
@@ -223,36 +222,39 @@ display: none;
 
 .page-one {
     display: grid;
-    height:75vh;
-    /* grid-auto-rows: minmax(100px, auto); */
-    /* height: ; */
-    grid-template-areas: 
-        "title title" 
-        "maintext maintext"
-        "applink applink"
-        "btn discover"
-    ;
+    height:80svh;
+    padding-left: var(--container-padding);
+    padding-right: var(--container-padding);
+    
 
-    grid-template-rows: 2fr 2fr 2fr 1.5fr;
+    /* grid-auto-rows: minmax(150px, auto); */
+
+
+    grid-template-areas: 
+        "title" 
+        "maintext"
+        "applink"
+        "btn";
+    
+        grid-template-rows: 2fr 2fr 1fr 2fr;
 
     background: rgb(99,102,241);
     background: linear-gradient(0deg, rgba(99,102,241,0.1) 0%, rgba(218,70,239,0.05) 42%, rgba(241,244,253,0.07) 83%);
 
-    .container {
-        /* display: grid; */
-    align-items: center;
-    gap: 1.5rem;
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
+    div {
+        max-width: 500px;
+        margin-left: auto;
+        margin-right: auto;
     }
+    
  
 }
 
 .title { grid-area: title;}
 .maintext {grid-area: maintext;}
 .applink {grid-area: applink;}
-.btn {grid-area: btn;}
-.discover {grid-area: discover;}
+.discover-btn {grid-area: btn;}
+
 
 .imgcontainer {
     width: 100%;
@@ -277,6 +279,8 @@ display: none;
 /* app buttons */
 .applink {
     gap: 1rem;
+    width: 100%;
+
 }
 .appbtn {
     padding: .5rem;
@@ -310,12 +314,19 @@ display: none;
     left: 50%;
     transform: translate(-50%, -50%);
 }
-/* Text */
+/* discover more */
 .discover {
     p {
         color: var(--txtclr-txt);
         font-size: 0.94rem;
     }
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
 }
 
 
