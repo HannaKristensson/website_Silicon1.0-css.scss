@@ -329,6 +329,10 @@ display: none;
     gap: 2rem;
 }
 
+.page-one_img {
+    display: none;
+}
+
 
 /* BRANDBOX */
 #brands {
@@ -373,6 +377,7 @@ footer {
         max-width: 720px;
     }
 
+    /* HEADER */
     .btn-toggle-switch .label {
         display: block;
     }
@@ -381,6 +386,23 @@ footer {
         gap: 3rem;
     }
 
+    /* PAGES */
+
+    .page-one {
+        div {
+            max-width: auto;
+        }
+    }
+
+
+
+    .page-one_img {
+        display: grid;
+    }
+    /* page one */
+
+
+    /* brands */
     #brands {
         display: block;
         
@@ -400,6 +422,8 @@ footer {
     #brand5, #brand6 {
         display: none;
     }
+
+    /* page two */
 
     footer {
         /* .container {
