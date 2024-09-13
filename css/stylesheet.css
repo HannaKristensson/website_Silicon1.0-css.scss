@@ -488,18 +488,22 @@ display: none;
     /* PAGE THREE - How does it work */
     .page_how {
         position: grid;
-        padding-top: 3.5rem;
-        padding-bottom: 3.5rem;
+        padding-top: 4rem;
+        padding-bottom: 5rem;
+        justify-content: center;
+        align-items: center;
         background-color: var(--color-gray100);
         grid-template-columns: 1fr;
         grid-template-rows: auto 1fr auto;
-        gap: 2rem;
+        gap: 3rem;
+
         /* grid-template-areas: 
         "h_header"
         "h_phone2"
         "h_text"; */
 
         h2 {
+            /* margin-bottom: 1rem; */
             font-size: 33px;
             color: var(--txtclr-heading);
         }
@@ -509,17 +513,18 @@ display: none;
         }
 
     }
-/* 
+    /* 
     #how_header {grid-area: h_header;}
     #how_phone2 {grid-area: h_phone2;}
     #how_text {grid-area: h_text;} */
+
+
 
     .how_phone1, .how_phone3 {
         display: none;
     }
 
     .how_text {
-
         h3 {
             margin-left: 3rem;
             margin-right: 3rem;
@@ -738,12 +743,54 @@ footer {
 
 
     /* PAGE THREE */
-
-    .how_phone1, .how_phone2 {
+    .how_phone1, .how_phone3 {
         display: block;
     }
 
+    
+    /* .page_how {
+        grid-template-areas: 
+        "h_header h_header h_header"
+        "h_phone1 h_phone2 h_phone3"
+        "  h_text";
+    }
+    
+    #how_header {grid-area: h_header;}
+    .how_phone1 {grid-area: h_phone1;}
+    .how_phone2 {grid-area: h_phone2;}
+    .how_phone3 {grid-area: h_phone3;}
+    .how_text {grid-area: h_text;}  */
 
+
+    .page_how {
+        position: grid;
+        grid-template-rows: auto;
+        grid-template-columns: auto;
+
+
+        img {
+            width: 100%;    
+            min-height: 30rem;
+        }
+    }
+
+    #how_header {
+        grid-column: 1/4;
+        grid-row: 1/2;
+    }
+    .how_phone1 {
+        grid-column: 1/2;
+        grid-row: 2/3;
+    }
+    .how_phone2 {
+        grid-column: 2/3;
+        grid-row: 2/3;
+    }
+    .how_text {
+        grid-column: 1/4;
+        grid-row: 3/4;
+        width: 80svw;
+    }
 
 
 
