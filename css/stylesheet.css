@@ -93,10 +93,6 @@ button {
     place-items: center;
 }
 
-.backg-color {
-    background: rgb(99,102,241);
-    background: linear-gradient(0deg, rgba(99,102,241,0.1) 0%, rgba(218,70,239,0.05) 42%, rgba(241,244,253,0.07) 83%);
-}
 
 .padding-rl {
     padding-left: var(--container-padding);
@@ -122,18 +118,6 @@ header .container {
     padding-bottom: 0.5rem;
 }
 
-/* sign in button */
-.btn_primary {
-    background-color: var(--color-primary);
-    color: var(--color-white);
-    border-radius: 8px;
-    padding: 12px 25px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-}
-
 .navbar {
     display: none;
     font-size: var(--fontsize-small);
@@ -141,21 +125,12 @@ header .container {
     color: var(--color-gray800)
 }
 
-.btn-primary:hover {
-    background-color: var(--color-gray900);
-    color: var(--color-white);
-    text-decoration: none;
-}
-
-.btn-primary {
-    margin-right: 0.5rem;
-}
-
 .btn-mobile {
     background-color: transparent;
     border: none;
-    font-size: 2rem;
+    font-size: 1.4rem;
 }
+
 
 /* color mode toggler */
 .btn-toggle-switch {
@@ -233,9 +208,35 @@ header .container {
     border-radius: 50%;
 }
 
+/* sign in button */
+.sign-in {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    border: 1px solid var(--color-primary);
+    border-radius: 5px;
+    padding: .5rem 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.sign-in:hover {
+    background-color: transparent;
+    color: var(--color-primary);
+    border: 1px solid var(--color-primary);
+    box-shadow: 0px 8px 18px -8px hsl(239, 84%, 67%, 90%);
+    text-decoration: none;
+
+}
+
+.sign-in {
+    display: none;
+    margin-right: 0.5rem;
+}
+
 /* navbar - mobile mode */
-
-
 .active  {
     color: var(--color-primary);
     text-decoration: none;
@@ -252,38 +253,22 @@ header .container {
     text-decoration: none;
 }
 
-#sign-in {
-display: none;
-}
-
 
 /* PAGE ONE */
-
 .page-one {
     display: grid;
-    /* height:80svh; */
-    
-
-    /* grid-auto-rows: minmax(150px, auto); */
-
-
     grid-template-areas: 
         "title" 
         "maintext"
         "applink"
         "btn";
-    
-        grid-template-rows: 1fr 1fr 1fr 1fr;
-
-    /* background: rgb(99,102,241);
-    background: linear-gradient(0deg, rgba(99,102,241,0.1) 0%, rgba(218,70,239,0.05) 42%, rgba(241,244,253,0.07) 83%); */
+    grid-template-rows: 1fr 1fr 1fr 1fr;
 
     div {
         max-width: 500px;
         margin-left: auto;
         margin-right: auto;
     }
-
 }
 
 .title { grid-area: title;}
@@ -291,27 +276,12 @@ display: none;
 .applink {grid-area: applink;}
 .discover-btn {grid-area: btn;}
 
-
-
-
-
-
 .gradient {
     /* width: 100lvw; */
     /* height: 100%; */
     background: rgb(99,102,241);
     background: linear-gradient(0deg, rgba(99,102,241,0.1) 0%, rgba(218,70,239,0.05) 42%, rgba(241,244,253,0.07) 83%);
  }
-
-
-
-
-
-
-
-
-
-
 
 .imgcontainer {
     width: 100%;
@@ -329,14 +299,12 @@ display: none;
     font-size: var(--fontsize-medium);
 }
 
-
-
 /* app buttons */
 .applink {
     gap: 1rem;
     width: 100%;
-
 }
+
 .appbtn {
     padding: .5rem;
     width: 100%;
@@ -344,82 +312,58 @@ display: none;
     border-radius: .5rem;
 }
 
+.appbtn:hover {
+    box-shadow: 0px 8px 18px -8px var(--txtclr-heading);
+}
+
 .appimg {
     height: 2.5rem;
 }
 
-
 /* Arrow button */
-
 .vectorarrow {
     display: block;
     background-color: var(--color-white);
-    height: 3.5rem;
+    height: 2.75rem;
     aspect-ratio: 1;
     border-radius: 50%;
     position: relative;
+
+    .arrow-light {
+        display: none;
+    }
+}
+
+.vectorarrow:hover {
+    background-color: var(--color-primary);
+    .arrow-light {
+        display: block;
+    }
+    .arrow-dark {
+        display: none;
+    }
 }
 
 .arrowdown {
-    padding: 1.3rem;
+    padding: 1rem;
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -47%);
 }
 
 /* discover more */
 .discover-btn {
+    gap: 1rem;
     display: flex;
     p {
         font-size: var(--fontsize-xsmall);
     }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .page-one_img{
     display: none;
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* brandbox */
 .brands-container {
@@ -437,7 +381,6 @@ display: none;
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
 #brands {
@@ -445,135 +388,92 @@ display: none;
 }
 
 
-/* .brands-container {
-    grid-template-areas: 
-    "brand1 brand2 brand3";
-    /* justify-content:space-between; */
-    /* align-items: center; */
-    /* justify-content: center; */
+
+/* PAGE TWO - FEATURES */
+.page_features {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    margin: 3rem auto;
+    gap: 2rem;
+
+    h2 {
+        margin-bottom: 1.5rem;
+    }   
+}
+
+.app-feature_phone {
+    display:none;
+}
+
+.app-feature_text  {
+    p { font-size: var(--fontsize-medium);}
+}
+
+.features {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    text-align: left;
+    gap: 2rem;
+
+    h3 { margin-bottom: 1rem;}
+
+    p { font-size: var(--fontsize-small);}
+}
+
+.feature_img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background-color: var(--color-gray100);
+    border-radius: 8px;
+    padding: 1rem;
+}
 
 
 
+/* PAGE THREE - HOW DOES IT WORK */
+.page_how {
+    position: grid;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    justify-content: center;
+    align-items: center;
 
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto;
+    gap: 2rem;
 
+    h2 {
+        font-size: 28px;
+        color: var(--txtclr-heading);
+    }
+    h3 {
+        font-size: 21.6px;
+        color: var(--txtclr-heading);
+    }
+}
 
+.background-clr {
+    background-color: var(--color-gray100);
+}
 
-    /* PAGE TWO - FEATURES */
+.how_phone1, .how_phone3 {
+    display: none;
+}
 
-    /* .app-feature {
-        position: grid;
-        text-align: left;
-        grid-template-areas: 
-        "f_img f_text";
-
-
-    } */
-
-    .page_features {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
-        margin: 3rem auto;
-        gap: 2rem;
-
-        h2 {
-            margin-bottom: 1.5rem;
-        }   
+.how_text {
+    h3 {
+        margin-left: 3rem;
+        margin-right: 3rem;
     }
 
-    .app-feature_phone {
-        display:none;
+    p {
+        margin-top: 1rem;
     }
-
-    
-
-
-
-
-
-    .app-feature_text  {
-        p { font-size: var(--fontsize-medium);}
-    }
-
-    .features {
-        display: grid;
-        grid-template-columns: auto 1fr;
-        text-align: left;
-        gap: 2rem;
-
-        h3 { margin-bottom: 1rem;}
-        
-        p { font-size: var(--fontsize-small);}
-    }
-
-    .feature_img {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 4rem;
-        height: 4rem;
-        background-color: var(--color-gray100);
-        border-radius: 8px;
-        padding: 1rem;
-    }
-
-
-    /* PAGE THREE - How does it work */
-    .page_how {
-        position: grid;
-        padding-top: 4rem;
-        padding-bottom: 5rem;
-        justify-content: center;
-        align-items: center;
-        background-color: var(--color-gray100);
-        grid-template-columns: 1fr;
-        grid-template-rows: auto 1fr auto;
-        gap: 3rem;
-
-        /* grid-template-areas: 
-        "h_header"
-        "h_phone2"
-        "h_text"; */
-
-        h2 {
-            /* margin-bottom: 1rem; */
-            font-size: 33px;
-            color: var(--txtclr-heading);
-        }
-        h3 {
-            font-size: 21.6px;
-            color: var(--txtclr-heading);
-        }
-
-    }
-    /* 
-    #how_header {grid-area: h_header;}
-    #how_phone2 {grid-area: h_phone2;}
-    #how_text {grid-area: h_text;} */
-
-
-
-    .how_phone1, .how_phone3 {
-        display: none;
-    }
-
-
-
-    .how_text {
-        h3 {
-            margin-left: 3rem;
-            margin-right: 3rem;
-
-        }
-        p {
-            margin-top: 1rem;
-        }
-    }
-
-
-
-
-
+}
 
 
 /* FOOTER */
@@ -585,9 +485,7 @@ footer {
     .container {
         display: flex;
         flex-direction: column;
-
     }
-    
 }
 
 
@@ -595,66 +493,46 @@ footer {
 
 
 @media ( min-width: 768px ) {
+.padding-rl {
+    padding-left: 2rem;
+    padding-right: 2rem ;
+}
 
-    .padding-rl {
-        padding-left: 2rem;
-        padding-right: 2rem ;
+/* HEADER */
+.btn-toggle-switch .label {
+    display: inline-block;
+}
+
+.toggle-switch .slider.round {
+    box-shadow: none;
+}
+
+.toggle-switch input:focus + .slider {
+    box-shadow: none;
+}
+
+header .container {
+    grid-template-columns: auto 3fr  auto auto auto;
+    gap: 3rem;
+}
+
+/* PAGES */
+/* Page one */
+.page-one {
+    height:80svh;
+    gap: 2rem;
+    overflow: hidden;
+    grid-template-columns: 1fr auto;
+    grid-template-areas: 
+    "title title"
+    "maintext p1_img"
+    "applink p1_img"
+    "btn p1_img";
+
+    p {
+        text-align: start;
     }
-
-
-    /* HEADER */
-
-    .btn-toggle-switch .label {
-        display: inline-block;
-    }
-    
-    .toggle-switch .slider.round {
-        box-shadow: none;
-    }
-
-    .toggle-switch input:focus + .slider {
-        box-shadow: none;
-    }
-
-    header .container {
-        grid-template-columns: auto 3fr  auto auto auto;
-        gap: 3rem;
-    }
-
-    /* PAGES */
-    /* page one */
-
-    .page-one {
-        height:80svh;
-        gap: 2rem;
-        overflow: hidden;
-
-
-        
-
-        grid-template-columns: 1fr auto;
-        grid-template-areas: 
-        "title title"
-        "maintext p1_img"
-        "applink p1_img"
-        "btn p1_img";
-
-
-        p {
-            text-align: start;
-        }
-    }
-
-
-
-
-
-
-
-
-
-
-
+}
 
 .page-one_img {
     display:inline;
@@ -666,185 +544,122 @@ footer {
     right: 0;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-    
-    
-
-
-
-
-
-
-    /* brands */
-
-    /* #brands {
-    display: block;
-    
-    } */
-
+/* brands */
 .brands-container {
     display: grid;
+}
+
+#brand5, #brand6 {
+    display: none;
+}
+
+
+/* page two - features */
+.page_features {
+    margin-top: 1rem;
+    margin-bottom: 5rem;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+}
+
+#feature-text {
+    grid-column: 1/3;
+    grid-row: 1/1; 
+}
+#feature-1 {
+    grid-column: 1/2;
+    grid-row: 3/4; 
+}
+#feature-2 {
+    grid-column: 2/3;
+    grid-row: 3/4; 
+}
+#feature-3 {
+    grid-column: 1/2;
+    grid-row: 5/6; 
+}
+#feature-4 {
+    grid-column: 2/3;
+    grid-row: 5/6; 
+}
+
+#feature-5 {
+    grid-column: 1/2;
+    grid-row: 7/8; 
+}
+#feature-6 {
+    grid-column: 2/3;
+    grid-row: 7/8; 
+} 
+
+
+/* Page three - How does it work */
+.how_phone1, .how_phone3 {
+    display: block;
+}
+
+
+/* .page_how {
+    grid-template-areas: 
+    "h_header h_header h_header"
+    "h_phone1 h_phone2 h_phone3"
+    "  h_text";
+}
+
+#how_header {grid-area: h_header;}
+.how_phone1 {grid-area: h_phone1;}
+.how_phone2 {grid-area: h_phone2;}
+.how_phone3 {grid-area: h_phone3;}
+.how_text {grid-area: h_text;}  */
+
+
+.page_how {
+    position: grid;
+    grid-template-rows: auto;
+    grid-template-columns: auto;
+
+    img {
+        width: 100%;    
+        min-height: 30rem;
+    }
+}
+
+#how_header {
+    grid-column: 1/4;
+    grid-row: 1/2;
+}
+.how_phones {
+    position: flex;
+    flex-direction: column;
+}
+#how_phones {
 
 }
 
-/* .brands-container {
-    display: flex;
-    grid-template-columns: repeat(4, 1fr);
-    gap: rem;
-} */
-    /* #brands {
-    display: block;
-        
 
-        .container {
-            display: flex;
-            justify-content:space-between;
-            /* align-items: center; */
-            /* justify-content: center; */
-            /* width: 100vw; */
- 
-            /* margin-left:0;
-            margin-right: 0; */
-            
-/* 
 
-        }
-    }  */
-
-    /* .brand-box {
-        width: 11rem;
-        height: 6rem;
+/* .how_phone1 {
+    grid-column: 1/2;
+    grid-row: 2/3;
+}
+.how_phone2 {
+    grid-column: 2/3;
+    grid-row: 2/3;
     } */
-
-    #brand5, #brand6 {
-        display: none;
-    }
-
-    /* PAGE TWO */
-
-    
-    /* .page_features {
-        grid-area: 
-        "ft ft"
-        "f1 f2"
-        "f3 f4"
-        "f5 f6";
-    } */
-
-    .page_features {
-        grid-template-columns: auto;
-        grid-template-rows: auto;
-    }
-  
-    #feature-text {
-        grid-column: 1/3;
-        grid-row: 1/1; 
-    }
-    #feature-1 {
-        grid-column: 1/2;
-        grid-row: 3/4; 
-    }
-    #feature-2 {
-        grid-column: 2/3;
-        grid-row: 3/4; 
-    }
-    #feature-3 {
-        grid-column: 1/2;
-        grid-row: 5/6; 
-    }
-    #feature-4 {
-        grid-column: 2/3;
-        grid-row: 5/6; 
-    }
-
-    #feature-5 {
-        grid-column: 1/2;
-        grid-row: 7/8; 
-    }
-    #feature-6 {
-        grid-column: 2/3;
-        grid-row: 7/8; 
-    } 
+.how_text {
+    grid-column: 1/4;
+    grid-row: 3/4;
+    width: 80svw;
+}
 
 
 
-    /* PAGE THREE */
-    .how_phone1, .how_phone3 {
-        display: block;
-    }
-
-    
-    /* .page_how {
-        grid-template-areas: 
-        "h_header h_header h_header"
-        "h_phone1 h_phone2 h_phone3"
-        "  h_text";
-    }
-    
-    #how_header {grid-area: h_header;}
-    .how_phone1 {grid-area: h_phone1;}
-    .how_phone2 {grid-area: h_phone2;}
-    .how_phone3 {grid-area: h_phone3;}
-    .how_text {grid-area: h_text;}  */
-
-
-    .page_how {
-        position: grid;
-        grid-template-rows: auto;
-        grid-template-columns: auto;
-
-        img {
-            width: 100%;    
-            min-height: 30rem;
-        }
-    }
-
-    #how_header {
-        grid-column: 1/4;
-        grid-row: 1/2;
-    }
-    .how_phones {
-        position: flex;
+footer {
+    .container {
+        display: flex;
         flex-direction: column;
     }
-    #how_phones {
-
-    }
-
-
-
-    /* .how_phone1 {
-        grid-column: 1/2;
-        grid-row: 2/3;
-    }
-    .how_phone2 {
-        grid-column: 2/3;
-        grid-row: 2/3;
-        } */
-    .how_text {
-        grid-column: 1/4;
-        grid-row: 3/4;
-        width: 80svw;
-    }
-
-
-
-    footer {
-        .container {
-            display: flex;
-            flex-direction: column;
-        }
-    }
+}
 }
 
 
@@ -858,7 +673,7 @@ footer {
 
 @media (min-width : 1200px) {
     .container {
-        max-width: 1300px;
+        max-width: 1200px;
     }
 
     .navbar  {
@@ -878,14 +693,14 @@ footer {
         display: block;
     }
 
-    
-
     .btn-mobile {
         display: none;
     }
 
+    /* PAGES */
     /* Page one */
     .page-one {
+        gap: 0;
         h1 {
             text-align: left;
         }
@@ -893,31 +708,37 @@ footer {
         "title p1_img"
         "maintext p1_img"
         "applink p1_img"
-        "applink p1_img"
         "btn p1_img";
 
-        /* grid-template-columns: 1fr auto; */
+        grid-template-rows: 1fr 1fr 1fr 3fr;
 
-        grid-template-rows: 2fr 1fr 1fr 1fr 1fr;
-
-        .discover-btn {
-
-            margin-bottom: 5rem;
-        }
-
+        
         .title {
+            margin-top: 5.5rem;
             margin-left: var(--container-padding);
+        }
+        
+        .maintext {
+            margin-left: var(--container-padding);
+            max-width: 30rem;
         }
 
         .applink {
+            margin-top: 1rem;
             margin-left: var(--container-padding);
+            max-width: 22rem;
+            
+            .appimg {
+                max-height: 1.8rem;
+            }
         }
-        .maintext {
-            margin-left: var(--container-padding);
-        }
+       
+    }
+    
+    .discover-btn {
+        margin-top: 6rem;
 
     }
-
 
     /* .page-one_img {
         justify-self: right;
@@ -979,7 +800,7 @@ footer {
 
 
 
-/* PAGE THREE */
+/* PAGE THREE - How does it work */
     .app-feature_phone {
         display: block;
 
