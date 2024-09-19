@@ -455,6 +455,9 @@ header .container {
         color: var(--txtclr-heading);
     }
 }
+.how_t2 {
+    display: none;
+}
 
 .background-clr {
     background-color: var(--color-gray100);
@@ -594,66 +597,43 @@ header .container {
 
 
 /* Page three - How does it work */
-.how_phone1, .how_phone3 {
-    display: block;
-}
-
-
-/* .page_how {
-    grid-template-areas: 
-    "h_header h_header h_header"
-    "h_phone1 h_phone2 h_phone3"
-    "  h_text";
-}
-
-#how_header {grid-area: h_header;}
-.how_phone1 {grid-area: h_phone1;}
-.how_phone2 {grid-area: h_phone2;}
-.how_phone3 {grid-area: h_phone3;}
-.how_text {grid-area: h_text;}  */
-
-
 .page_how {
     position: grid;
-    grid-template-rows: auto;
-    grid-template-columns: auto;
+    grid-template-rows: 1fr auto auto;
+    grid-template-columns: 1fr;
 
+    h2 {
+        margin-bottom: .5rem;
+    }
+    
     img {
         width: 100%;    
-        min-height: 30rem;
     }
 }
 
-#how_header {
-    grid-column: 1/4;
-    grid-row: 1/2;
-}
+
 .how_phones {
-    position: flex;
-    flex-direction: column;
-}
-#how_phones {
-
+    display: flex;
+    flex-direction: row;
+    gap: .5rem;
 }
 
-
-
-/* .how_phone1 {
-    grid-column: 1/2;
-    grid-row: 2/3;
+.how_phone1, .how_phone3 {
+    display: block;
+    height: 29rem;
 }
+
 .how_phone2 {
-    grid-column: 2/3;
-    grid-row: 2/3;
-    } */
+    height: 29rem;
+}
+
 .how_text {
-    grid-column: 1/4;
-    grid-row: 3/4;
-    width: 80svw;
+    margin-top: .5rem;
+    max-width: 60%;
 }
 
 
-
+/* Footer */
 footer {
     .container {
         display: flex;
@@ -737,110 +717,79 @@ footer {
     
     .discover-btn {
         margin-top: 6rem;
-
-    }
-
-    /* .page-one_img {
-        justify-self: right;
     }
 
 
-    .title {
-        grid-column: 1/2;
-        grid-row: 1/3;
-    }
-    .maintext {
-        grid-column: 1/2;
-        grid-row: 3/4;
-    }
-
-    .applink {
-        grid-column: 1/2;
-        grid-row: 4/6;
-    }
-
-    .discover-btn {
-        grid-column: 1/2;
-        grid-row: 6/7;
-    }
+/* Page two - Features */
+.page_features {
+    text-align: left;
+    gap: 1rem;
+    margin-top: 3rem;
+    margin-bottom: 5rem;
     
-    .page-one_img {
-        grid-column: 2/3;
-        grid-row: 1/7;
-    } */
+}
+
+.app-feature_phone {
+    display: block;
+}
+
+.feature_phone {
+    /* min-height: 20rem; */
+    max-height: 35rem;
+    margin-right: 7rem;
+}
+
+#feature-phone {
+    grid-column: 1/2;
+    grid-row: 1/5;
+}
+#feature-text {
+    grid-column: 3/5;
+    grid-row: 1/2; 
+}
+#feature-1 {
+    grid-column: 3/4;
+    grid-row: 2/3; 
+}
+#feature-2 {
+    grid-column: 4/5;
+    grid-row: 2/3; 
+}
+#feature-3 {
+    grid-column: 3/4;
+    grid-row: 3/4; 
+}
+#feature-4 {
+    grid-column:  4/5;
+    grid-row: 3/4; 
+}
+
+#feature-5 {
+    grid-column: 3/4;
+    grid-row: 4/5;
+}
+#feature-6 {
+    grid-column:  4/5;
+    grid-row: 4/5; 
+} 
 
 
-    /* .title { 
-        grid-column: 1/5;
-        grid-row: 1/2;
-    }
-    .maintext {
-        grid-column: 1/3;
-        grid-row: 2/2;
-    }
-    /* /* .maintext {grid-area: maintext;} */
-    /* .applink {
-        grid-column: 1/3;
-        grid-row: 3/3;
-    }
- 
-    .discover-btn {
-        grid-column: 1/2;
-        grid-row: 4/4;
-    } */
+    /* Page three - How does it work */
+.how_phones {
+    gap: 5rem;
+    justify-content: space-between;
+}
 
+.how_phone1, .how_phone3, .how_phone2 {
+    height: 35rem;
+}
 
-    .brands-container {
-        grid-template-columns: repeat(6, 1fr);
-    }
-    
-    #brand5, #brand6 {
-        display: grid;
-    }
+.how_t1 {
+    display: none;
+}
 
+.how_t2 {
+    display: contents;
+}
 
-
-/* PAGE THREE - How does it work */
-    .app-feature_phone {
-        display: block;
-
-    }
-
-    .page_features {
-        text-align: left;
-    }
-  
-    #feature-phone {
-        grid-column: 1/2;
-        grid-row: 1/5;
-    }
-    #feature-text {
-        grid-column: 3/5;
-        grid-row: 1/2; 
-    }
-    #feature-1 {
-        grid-column: 3/4;
-        grid-row: 2/3; 
-    }
-    #feature-2 {
-        grid-column: 4/5;
-        grid-row: 2/3; 
-    }
-    #feature-3 {
-        grid-column: 3/4;
-        grid-row: 3/4; 
-    }
-    #feature-4 {
-        grid-column:  4/5;
-        grid-row: 3/4; 
-    }
-
-    #feature-5 {
-        grid-column: 3/4;
-        grid-row: 4/5;
-    }
-    #feature-6 {
-        grid-column:  4/5;
-        grid-row: 4/5; 
-    } 
 }
