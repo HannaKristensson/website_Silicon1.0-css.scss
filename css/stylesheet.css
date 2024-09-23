@@ -492,9 +492,13 @@ header .container {
     margin-bottom: 5rem;
     display: none;
     text-align: left;
-    h2 {
-        size: 2rem;
+    h3 {
         margin-bottom: 2rem;
+    }
+
+    .btn_primary {
+        width: 160px;
+        height: 44px;
     }
     
 }
@@ -503,14 +507,14 @@ header .container {
 .transfer {
     display: flex;
     justify-content: center;
-    gap: 7rem;
+    gap: 12rem;
 }
 
 .transfer_txt {
-    width: 380px;
+    max-width: 400px;
     ul {
         line-height: 2rem;
-        margin-bottom: 1.5rem;
+        margin-bottom: 3rem;
     }
 
     li {
@@ -527,8 +531,9 @@ header .container {
 
 .transfer_img {
     position: relative;
-    height: 350px;
-    width: 360px;
+    /* border: 1px solid black; */
+    height: 455px;
+    width: 470px;
 }
 .t-inner_img {
     position: absolute;
@@ -540,27 +545,66 @@ header .container {
     position: absolute;
     z-index: 1;
     height: 117px;
-bottom: 0;
-right: 0;
+    bottom: 0;
+    right: 0;
 }
 
 /* Receive */
 .receive {
     display: flex;
     justify-content: center;
-    gap: 7rem;
+    gap: 12rem;
+    margin-top: 6rem;
 }
 
 .receive_img {
-    border: 1px solid black;
+    /* border: 1px solid black; */
     position: relative;
-    height: 400px;
-    width: 400px;
+    height: 450px;
+    width: 460px;
+}
+
+.receive_right {
+    max-width: 560px;
+    margin-top: 3rem;
+    /* display: flex;
+    flex-direction: column; */
+}
+
+.receive_txt {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 2.5rem;
+
+}
+.r_payment, .r_cashback {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
 
 .r-inner_img {
-    height: 350px;
+    height: 450px;
+    position: absolute;
+    z-index: -10;
 }
+
+.r-outer_img {
+    width: 323px;
+    position: absolute;
+    right: 0;
+    top: 100px;
+}
+
+.r-o_1 {
+    z-index: -5;
+}
+.r-o_2 {
+    z-index: 1;
+    top: 97px;
+    right: -3px;
+}
+
 
 
 /* FOOTER */
