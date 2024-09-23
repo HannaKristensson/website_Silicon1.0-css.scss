@@ -13,12 +13,10 @@
     --color-white: #fff;
 
     --container-padding: 1rem;
-    --fontsize-medium: 18px;
-    --fontsize-small: 16px;
-    --fontsize-xsmall: 14px;
+    --fontsize-18: 18px;
+    --fontsize-16: 16px;
+    --fontsize-14: 14px;
     --transition-time: all 0.2s;
-
-
 }
 
 * {
@@ -28,17 +26,11 @@
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
-/* body, section, div, header, footer, main, aside, nav, blockquote, p, span {
-    margin: 0;
-    padding: 0;
-} */
-
 body {
     font-family: "Manrope", sans-serif;
     font-optical-sizing: auto;
     text-align: center;
     font-weight: 400;
-
 }
 
 a {
@@ -52,32 +44,38 @@ a:hover {
 }
 
 h1 {
-    font-weight: 800; 
-    font-size: 2.125rem;
+    font-size: 2.5rem;
 }
 
 h2 {
-    font-weight: 800;
-    font-size: 30px;
+    font-size: 1.8rem;
 }
 
 h3 {
-    font-size: 20px;
+    font-size: 2rem;
+}
+
+h4 {
+    font-size: 1.35rem;
 }
 
 h5 {
+    font-size: 1.25rem;
+}
+
+h1, h2, h3, h4, h5 {
+    color: var(--txtclr-heading);
     font-weight: 800;
-    font-size: 20.8px;
 }
 
 p {
 color: var(--color-breadtext);
+font-size: var(--fontsize-18);
 }
 
 li {
     color: var(--color-breadtext);
 }
-
 
 button {
     border: none;
@@ -103,8 +101,6 @@ button {
     border: 1px solid var(--color-primary);
     box-shadow: 0px 8px 18px -8px hsl(239, 84%, 67%, 90%);
     text-decoration: none;
-
-
 }
 
 
@@ -112,7 +108,6 @@ button {
     width: 100%;
     margin-left: auto;
     margin-right: auto;
-
 }
 
 .grid-center {
@@ -135,7 +130,6 @@ button {
 
 
 /* HEADER */
-
 header .container {
     display: grid;
     align-items: center;
@@ -147,7 +141,7 @@ header .container {
 
 .navbar {
     display: none;
-    font-size: var(--fontsize-small);
+    font-size: var(--fontsize-16);
     font-weight: 600;
     color: var(--color-gray800)
 }
@@ -173,10 +167,9 @@ header .container {
 
 .label {
     color: var(--txtclr-heading);
-    font-size: (--fontsize-small);
+    font-size: (--fontsize-16);
     font-weight: 600;
     margin-right: 1rem;
-
 }
 
 .toggle-switch {
@@ -307,8 +300,6 @@ header .container {
 .discover-btn {grid-area: btn;}
 
 .gradient {
-    /* width: 100lvw; */
-    /* height: 100%; */
     background: rgb(99,102,241);
     background: linear-gradient(0deg, rgba(99,102,241,0.1) 0%, rgba(218,70,239,0.05) 42%, rgba(241,244,253,0.07) 83%);
  }
@@ -319,14 +310,10 @@ header .container {
 } 
 
 /* title & maintext */
-.title {
-    h1 {
-        font-size: 3rem;
-    }
-}
 
-.maintext {
-    font-size: var(--fontsize-medium);
+
+.maintext_2 {
+    display: none;
 }
 
 /* app buttons */
@@ -354,7 +341,7 @@ header .container {
 .vectorarrow {
     display: block;
     background-color: var(--color-white);
-    height: 2.75rem;
+    height: 2.8rem;
     aspect-ratio: 1;
     border-radius: 50%;
     position: relative;
@@ -384,10 +371,10 @@ header .container {
 
 /* discover more */
 .discover-btn {
-    gap: 1rem;
+    gap: 1.5rem;
     display: flex;
     p {
-        font-size: var(--fontsize-xsmall);
+        font-size: var(--fontsize-14);
     }
 }
 
@@ -435,20 +422,19 @@ header .container {
 .app-feature_phone {
     display:none;
 }
-
-.app-feature_text  {
-    p { font-size: var(--fontsize-medium);}
-}
-
+    
 .features {
     display: grid;
     grid-template-columns: auto 1fr;
     text-align: left;
     gap: 2rem;
 
-    h3 { margin-bottom: 1rem;}
-
-    p { font-size: var(--fontsize-small);}
+    h5 {
+        margin-bottom: 1rem;
+    }
+    p { 
+        font-size: var(--fontsize-16);
+    }
 }
 
 .feature_img {
@@ -475,15 +461,6 @@ header .container {
     grid-template-columns: 1fr;
     grid-template-rows: auto 1fr auto;
     gap: 2rem;
-
-    h2 {
-        font-size: 28px;
-        color: var(--txtclr-heading);
-    }
-    h3 {
-        font-size: 21.6px;
-        color: var(--txtclr-heading);
-    }
 }
 .how_t2 {
     display: none;
@@ -498,38 +475,42 @@ header .container {
 }
 
 .how_text {
-    h3 {
+    h4 {
         margin-left: 3rem;
         margin-right: 3rem;
     }
 
     p {
         margin-top: 1rem;
+        font-size: var(--fontsize-16);
     }
 }
 
 /* PAGE FOUR - Transfer / Receive */
 .page_transfer-receive {
     margin-top: 7rem;
+    margin-bottom: 5rem;
     display: none;
     text-align: left;
-
+    h2 {
+        size: 2rem;
+        margin-bottom: 2rem;
+    }
+    
 }
 
+/* Transfer */
 .transfer {
     display: flex;
     justify-content: center;
     gap: 7rem;
 }
 
-.transfer_text {
-    width: 400px;
-    h2 {
-        size: 2rem;
-        margin-bottom: 2rem;
-    }
+.transfer_txt {
+    width: 380px;
     ul {
         line-height: 2rem;
+        margin-bottom: 1.5rem;
     }
 
     li {
@@ -544,31 +525,47 @@ header .container {
     }
 }
 
-
 .transfer_img {
     position: relative;
-    /* border: 1px solid black; */
     height: 350px;
     width: 360px;
 }
 .t-inner_img {
     position: absolute;
     z-index: -10;
-    height: 300px;
+    height: 395px;
 }
 
 .t-outer_img {
     position: absolute;
     z-index: 1;
-    height: 90px;
+    height: 117px;
 bottom: 0;
 right: 0;
+}
+
+/* Receive */
+.receive {
+    display: flex;
+    justify-content: center;
+    gap: 7rem;
+}
+
+.receive_img {
+    border: 1px solid black;
+    position: relative;
+    height: 400px;
+    width: 400px;
+}
+
+.r-inner_img {
+    height: 350px;
 }
 
 
 /* FOOTER */
 footer {
-    font-size: var(--fontsize-xsmall);
+    font-size: var(--fontsize-14);
     color: var(--color-gray600);
     text-align: center;
 
@@ -586,6 +583,18 @@ footer {
 .padding-rl {
     padding-left: 2rem;
     padding-right: 2rem ;
+}
+
+h1 {
+    font-size: 2.75rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h4 {
+    font-size: 1.4rem;
 }
 
 /* HEADER */
@@ -620,8 +629,29 @@ header .container {
     "btn p1_img";
 
     p {
-        text-align: start;
+        text-align: left;
     }
+}
+
+.maintext {
+    /* display: flex;
+    flex-direction: column; */
+    margin-top: 4rem;
+    margin-left: 0;
+
+
+}
+#main {
+margin-left: 0;
+}
+
+.maintext_1 {
+    display: none;
+}
+
+.maintext_2 {
+    display: block;
+
 }
 
 .page-one_img {
@@ -704,18 +734,14 @@ header .container {
     gap: .5rem;
 }
 
-.how_phone1, .how_phone3 {
+.how_phone1,.how_phone2, .how_phone3 {
     display: block;
-    height: 29rem;
-}
-
-.how_phone2 {
-    height: 29rem;
+    height: 25.6rem;
 }
 
 .how_text {
     margin-top: .5rem;
-    max-width: 60%;
+    max-width: 600px;
 }
 
 
@@ -739,7 +765,27 @@ footer {
 
 @media (min-width : 1200px) {
     .container {
-        max-width: 1200px;
+        max-width: 1295px;
+    }
+    
+    h1 {
+       font-size: 3.5rem; 
+    }
+
+    h2 {
+        font-size: 2.5rem;
+    }
+
+    h4 {
+        font-size: 1.5rem;
+    }
+
+    p {
+        color: var(--color-gray700);
+    }
+
+    li {
+        color: var(--color-gray700);
     }
 
     .navbar  {
@@ -812,7 +858,17 @@ footer {
     gap: 1rem;
     margin-top: 3rem;
     margin-bottom: 5rem;
+
+    h2 {
+        size: 2.5rem;
+    }
     
+}
+
+.app-feature_text {
+    p {
+        color: var(--color-gray600);
+    }
 }
 
 .app-feature_phone {
@@ -821,8 +877,8 @@ footer {
 
 .feature_phone {
     /* min-height: 20rem; */
-    max-height: 35rem;
-    margin-right: 7rem;
+    max-height: 42rem;
+    margin-right: 6rem;
 }
 
 #feature-phone {
@@ -861,13 +917,18 @@ footer {
 
 
     /* Page three - How does it work */
+    .page_how {
+        h2 {
+            size: 2.5rem;
+        }
+    }
 .how_phones {
-    gap: 5rem;
+    gap: 7rem;
     justify-content: space-between;
 }
 
 .how_phone1, .how_phone3, .how_phone2 {
-    height: 35rem;
+    height: 41rem;
 }
 
 .how_t1 {
