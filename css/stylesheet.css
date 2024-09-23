@@ -74,10 +74,37 @@ p {
 color: var(--color-breadtext);
 }
 
+li {
+    color: var(--color-breadtext);
+}
+
 
 button {
     border: none;
     cursor: pointer;
+}
+
+.btn_primary {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    border: 1px solid var(--color-primary);
+    border-radius: 5px;
+    padding: .5rem 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.btn_primary:hover {
+    background-color: transparent;
+    color: var(--color-primary);
+    border: 1px solid var(--color-primary);
+    box-shadow: 0px 8px 18px -8px hsl(239, 84%, 67%, 90%);
+    text-decoration: none;
+
+
 }
 
 
@@ -209,7 +236,7 @@ header .container {
 }
 
 /* sign in button */
-.sign-in {
+/* .sign-in {
     background-color: var(--color-primary);
     color: var(--color-white);
     border: 1px solid var(--color-primary);
@@ -229,11 +256,14 @@ header .container {
     box-shadow: 0px 8px 18px -8px hsl(239, 84%, 67%, 90%);
     text-decoration: none;
 
-}
+} */
 
 .sign-in {
     display: none;
     margin-right: 0.5rem;
+    i {
+        margin-right: .3rem;
+    }
 }
 
 /* navbar - mobile mode */
@@ -478,6 +508,63 @@ header .container {
     }
 }
 
+/* PAGE FOUR - Transfer / Receive */
+.page_transfer-receive {
+    margin-top: 7rem;
+    display: none;
+    text-align: left;
+
+}
+
+.transfer {
+    display: flex;
+    justify-content: center;
+    gap: 7rem;
+}
+
+.transfer_text {
+    width: 400px;
+    h2 {
+        size: 2rem;
+        margin-bottom: 2rem;
+    }
+    ul {
+        line-height: 2rem;
+    }
+
+    li {
+        list-style-image: url("/images/bx-check-circle.svg");
+        list-style-position: inside;
+    }
+}
+
+.transfer_btn {
+    i {
+        margin-left: .5rem;
+    }
+}
+
+
+.transfer_img {
+    position: relative;
+    /* border: 1px solid black; */
+    height: 350px;
+    width: 360px;
+}
+.t-inner_img {
+    position: absolute;
+    z-index: -10;
+    height: 300px;
+}
+
+.t-outer_img {
+    position: absolute;
+    z-index: 1;
+    height: 90px;
+bottom: 0;
+right: 0;
+}
+
 
 /* FOOTER */
 footer {
@@ -610,7 +697,6 @@ header .container {
         width: 100%;    
     }
 }
-
 
 .how_phones {
     display: flex;
@@ -790,6 +876,11 @@ footer {
 
 .how_t2 {
     display: contents;
+}
+
+/* Page four - Transfer / Receive */
+.page_transfer-receive {
+    display: block;
 }
 
 }
