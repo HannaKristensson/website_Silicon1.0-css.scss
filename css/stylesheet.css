@@ -1,6 +1,7 @@
 :root {
     --color-dark: #0B0F19;
     --color-primary: #6366F1;
+    --color-success: #22C55E;
     --txtclr-heading: #131022;
     --color-gray900: #0B0F19;
     --color-gray800: #33354D;
@@ -699,7 +700,6 @@ header .container {
 
 /* PAGE SIX - Questions */
 /* Med inspiration och hjälp tagen från hemsidan https://supfort.com/pure-css-accordion-without-javascript */
-
 .page_question {
     display: flex;
     flex-direction: column;
@@ -713,15 +713,25 @@ header .container {
         margin-bottom: 2rem;
     }
 
+    .btn_primary {
+        font-size: .875rem;
+        height: 3rem;
+        width: 10rem;
+    }
+
+    .question_h2 {
+        display: inline-block;
+    }
 }
 
-
-
+/* Accordion */
 .accordion {
-    max-width: 500px;
+    /* max-width: 500px; */
     text-align: left;
+
     p {
         font-size: var(--fontsize-14);
+        max-width: 500px;
     }
 
     input {
@@ -752,7 +762,6 @@ header .container {
     input:checked + label + .acc_content {
         display: block;
     } 
-
 }
 
 .accordion_top {
@@ -773,12 +782,11 @@ header .container {
     p {
         font-size: var(--fontsize-14);
         line-height: 1.4rem;
-        margin-bottom: .5rem;
+        margin-bottom: 1rem;
     }
-
 }
 
-    /* Arrow menu-button */
+/* Arrow menu-button */
 .arrowbtn_menu {
     display: block;
     background-color: var(--color-gray100);
@@ -810,6 +818,69 @@ header .container {
     left: 50%;
     transform: translate(-50%, -47%);
 }
+
+/* Contact */
+.questions_contact {
+    display: none;
+    width: 100%;
+    gap: 1.5rem;
+    justify-content: space-between;
+
+    p {
+        font-size: var(--fontsize-14);
+        color: var(--color-gray700);
+    }
+
+    nav {
+        display:flex;
+        font-size: var(--fontsize-14);
+        gap: .7rem;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: .5rem;
+    }
+}
+
+.questions_call {
+    Display: flex;
+    flex-direction: column;
+    align-items: start;
+    border: 1px solid var(--color-gray300);
+    border-radius: 8px;
+    padding: 1.5rem;
+    width: 100%;
+    gap: 1.2rem;
+
+    nav {
+        color: var(--color-primary);
+    }
+
+    img {
+        height: 1.75rem;
+    }
+}
+
+.questions_txt {
+    Display: flex;
+    flex-direction: column;
+    align-items: start;
+    border: 1px solid var(--color-gray300);
+    border-radius: 8px;
+    padding: 1.5rem;
+    width: 100%;
+    gap: 1.2rem;
+
+    nav {
+        color: var(--color-success);
+    }
+
+    img {
+        height: 1.75rem;
+    }
+}
+
+
+
 
 
 
@@ -994,6 +1065,75 @@ margin-left: 0;
     max-width: 600px;
 }
 
+/* Page six - Questions */
+.page_question {
+    h2 {
+        color: var(--color-gray900);
+    }
+    .btn_primary  {
+        display: none;
+    }
+
+}
+
+.question_text {
+    max-width: 420px;
+
+    .question_h2_m {
+        display: none;
+    }
+}
+
+.question_title {
+    margin-bottom: 1rem;
+
+    .question_h2 {
+        display: block;
+        margin: 0;
+    }
+}
+
+.accordion {
+    width: 100%;
+
+    p {
+        max-width: 1200px;
+    }
+
+    label {
+        color: var(--color-gray900);
+        border: 0;
+        border-radius: 8px;
+        padding: 1.3rem;
+    }
+}
+
+.accordion_top {
+    border-radius: 0;
+}
+
+.accordion_btm {
+    border-radius: 0;
+}
+
+.accordion_box {
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    box-shadow: 0px 4.4px 12px -1px rgba(19,16,34,0.15);
+    box-shadow: 0px 2px 6.4px -1px rgba(19,16,34,0.2);
+}
+
+.acc_content {
+    border: 0;
+    padding: 1.3rem;
+    padding-top: 0;
+}
+
+.questions_contact {
+    display: flex;
+}
+
+
 
 /* Footer */
 footer {
@@ -1173,7 +1313,7 @@ footer {
         }
     }
 .how_phones {
-    gap: 7rem;
+    width: 100%;
     justify-content: space-between;
 }
 
@@ -1189,14 +1329,35 @@ footer {
     display: contents;
 }
 
+
+
 /* Page four - Transfer / Receive */
 .page_transfer-receive {
     display: block;
 }
+
+
 
 /* Page five - Reviews */
 .page_reviews {
     display: flex;
 }
 
+
+
+/* Page six - Questions */
+    .page_question {
+        display: grid;
+        grid-template-columns: 37% auto;
+    }
+
+    .question_text {
+        grid-column: 1/2;
+        grid-row: 1/2;}
+    .questions_contact {
+        grid-column: 1/2;
+        grid-row: 2/3;}
+    .accordion {
+        grid-column: 2/4;
+        grid-row: 1/5;}
 }
