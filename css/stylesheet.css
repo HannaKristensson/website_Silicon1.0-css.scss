@@ -45,10 +45,12 @@ a:hover {
 
 h1 {
     font-size: 2.5rem;
+    /* line-height: 2.775rem; */
 }
 
 h2 {
     font-size: 1.8rem;
+    line-height: 2.26rem;
 }
 
 h3 {
@@ -77,6 +79,21 @@ h1, h2, h3, h4, h5 {
 p {
 color: var(--color-breadtext);
 font-size: var(--fontsize-18);
+}
+
+.p18 {
+    line-height: 1.8rem;
+    font-size: 1.125rem;
+}
+
+.p16 {
+    line-height: 1.6rem;
+    font-size: 1rem;
+}
+
+.p14 {
+    line-height: 1.4rem;
+    font-size: 0.875rem;
 }
 
 li {
@@ -388,7 +405,7 @@ header .container {
     display: none;
 }
 
-/* brandbox */
+/* Brandbox */
 .brands-container {
     display: none;
     padding-top: 3rem;
@@ -612,7 +629,7 @@ header .container {
 }
 
 
-/* PAGE FIVE - Clients review */
+/* PAGE FIVE - Client reviews */
 .page_reviews {
     display: none;
     margin-top: 6.5rem;
@@ -678,6 +695,120 @@ header .container {
     img {
         height: 3rem;
     }
+}
+
+/* PAGE SIX - Questions */
+/* Med inspiration och hjälp tagen från hemsidan https://supfort.com/pure-css-accordion-without-javascript */
+
+.page_question {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4rem;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+
+    h2 {
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+    }
+
+}
+
+
+
+.accordion {
+    max-width: 500px;
+    text-align: left;
+    p {
+        font-size: var(--fontsize-14);
+    }
+
+    input {
+        display: none;
+    }
+    
+    label {
+        display: flex;
+        justify-content: space-between;
+        font-size: 1rem;
+        font-weight: 600;
+        color: var(--txtclr-heading);
+        background-color: white;
+        border: 1px solid var(--color-gray300);
+        padding: 1rem 1.5rem;
+
+        align-items: center;
+        
+        img {
+            cursor:pointer;
+        }
+    }
+
+    input + label + .acc_content {
+        display: none;
+    }
+
+    input:checked + label + .acc_content {
+        display: block;
+    } 
+
+}
+
+.accordion_top {
+    label {
+        border-radius: 8px 8px 0px 0px;
+    }
+}
+
+.accordion_btm  {
+    label {
+        border-radius: 0px 0px 8px 8px;
+    }
+}
+
+.acc_content {
+    border: 1px solid var(--color-gray300);
+    padding: 1rem;
+    p {
+        font-size: var(--fontsize-14);
+        line-height: 1.4rem;
+        margin-bottom: .5rem;
+    }
+
+}
+
+    /* Arrow menu-button */
+.arrowbtn_menu {
+    display: block;
+    background-color: var(--color-gray100);
+    height: 2.25rem;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    position: relative;
+
+    .arrow-light {
+        display: none;
+    }
+}
+
+.arrowbtn_menu:hover {
+    background-color: var(--color-primary);
+
+    .arrow-light {
+        display: block;
+    }
+    .arrow-dark {
+        display: none;
+    }
+}
+
+.arrowdown {
+    padding: .8rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -47%);
 }
 
 
