@@ -349,8 +349,12 @@ header .container {
     box-shadow: 0px 8px 18px -8px var(--txtclr-heading);
 }
 
-.appimg {
+.appimg-light, .appimg-dark {
     height: 2.5rem;
+}
+
+.appimg-dark {
+    display: none;
 }
 
 /* Arrow button */
@@ -488,6 +492,30 @@ header .container {
 
 .how_phone1, .how_phone3 {
     display: none;
+}
+
+.how_phone2 {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 10;
+}
+
+.how_phone-top {
+    height: 100%;
+    width: 100%;
+    position:absolute;
+    right: 0;
+    top: 0;
+    z-index: 1;
+}
+
+.how_phone-middle {
+    position: relative;
+    height: 34rem;
+    width: 17rem;
 }
 
 .how_text {
@@ -1121,12 +1149,18 @@ margin-left: 0;
 .how_phones {
     display: flex;
     flex-direction: row;
-    gap: .5rem;
+    gap: 1rem;
 }
 
-.how_phone1,.how_phone2, .how_phone3 {
+.how_phone1, .how_phone3 {
     display: block;
-    height: 25.6rem;
+    height: 25rem;
+    width: 13rem;
+}
+
+.how_phone-middle {
+    height: 25rem;
+    width: 13rem;
 }
 
 .how_text {
@@ -1232,99 +1266,99 @@ footer {
 
 @media (min-width : 950px) {
 
-    .applink {
-        grid-template-columns: 1fr 1fr;
-     }
+.applink {
+    grid-template-columns: 1fr 1fr;
+    }
 }
 
 
 @media (min-width : 1200px) {
-    .container {
-        max-width: 1295px;
-    }
-    
+.container {
+    max-width: 1295px;
+}
+
+h1 {
+    font-size: 3.5rem; 
+}
+
+h2 {
+    font-size: 2.5rem;
+}
+
+h4 {
+    font-size: 1.5rem;
+}
+
+p {
+    color: var(--color-gray700);
+}
+
+li {
+    color: var(--color-gray700);
+}
+
+.navbar  {
+    display: block;
+}
+
+header .container {
+    grid-template-columns: auto auto 3fr auto auto;
+    gap: 3rem;
+}
+
+.label {
+    color: var(--color-gray700);
+}
+
+#sign-in {
+    display: block;
+}
+
+.btn-mobile {
+    display: none;
+}
+
+/* PAGES */
+/* Page one */
+.page-one {
+    gap: 0;
     h1 {
-       font-size: 3.5rem; 
+        text-align: left;
     }
+    grid-template-areas: 
+    "title p1_img"
+    "maintext p1_img"
+    "applink p1_img"
+    "btn p1_img";
 
-    h2 {
-        font-size: 2.5rem;
-    }
+    grid-template-rows: 1fr 1fr 1fr 3fr;
 
-    h4 {
-        font-size: 1.5rem;
-    }
-
-    p {
-        color: var(--color-gray700);
-    }
-
-    li {
-        color: var(--color-gray700);
-    }
-
-    .navbar  {
-        display: block;
-    }
-
-    header .container {
-        grid-template-columns: auto auto 3fr auto auto;
-        gap: 3rem;
-    }
-
-    .label {
-        color: var(--color-gray700);
-    }
-
-    #sign-in {
-        display: block;
-    }
-
-    .btn-mobile {
-        display: none;
-    }
-
-    /* PAGES */
-    /* Page one */
-    .page-one {
-        gap: 0;
-        h1 {
-            text-align: left;
-        }
-        grid-template-areas: 
-        "title p1_img"
-        "maintext p1_img"
-        "applink p1_img"
-        "btn p1_img";
-
-        grid-template-rows: 1fr 1fr 1fr 3fr;
-
-        
-        .title {
-            margin-top: 5.5rem;
-            margin-left: var(--container-padding);
-        }
-        
-        .maintext {
-            margin-left: var(--container-padding);
-            max-width: 30rem;
-        }
-
-        .applink {
-            margin-top: 1rem;
-            margin-left: var(--container-padding);
-            max-width: 22rem;
-            
-            .appimg {
-                max-height: 1.8rem;
-            }
-        }
-       
+    
+    .title {
+        margin-top: 5.5rem;
+        margin-left: var(--container-padding);
     }
     
-    .discover-btn {
-        margin-top: 6rem;
+    .maintext {
+        margin-left: var(--container-padding);
+        max-width: 30rem;
     }
+
+    .applink {
+        margin-top: 1rem;
+        margin-left: var(--container-padding);
+        max-width: 22rem;
+        
+        .appimg {
+            max-height: 1.8rem;
+        }
+    }
+    
+}
+
+.discover-btn {
+    margin-top: 6rem;
+}
 
 
 /* Page two - Features */
@@ -1391,19 +1425,26 @@ footer {
 } 
 
 
-    /* Page three - How does it work */
-    .page_how {
-        h2 {
-            size: 2.5rem;
-        }
+
+/* Page three - How does it work */
+.page_how {
+    h2 {
+        size: 2.5rem;
     }
+}
+
 .how_phones {
     width: 100%;
     justify-content: space-between;
 }
 
-.how_phone1, .how_phone3, .how_phone2 {
+.how_phone1, .how_phone3{
     height: 41rem;
+}
+
+.how_phone-middle {
+    height: 41rem;
+    width: 20.5rem;
 }
 
 .how_t1 {
@@ -1431,21 +1472,21 @@ footer {
 
 
 /* Page six - Questions */
-    .page_question {
-        display: grid;
-        grid-template-columns: 37% auto;
-    }
+.page_question {
+    display: grid;
+    grid-template-columns: 37% auto;
+}
 
-    .question_text {
-        grid-column: 1/2;
-        grid-row: 1/2;}
-    .questions_contact {
-        grid-column: 1/2;
-        grid-row: 2/3;}
-    .accordion {
-        grid-column: 2/4;
-        grid-row: 1/5;}
-    
+.question_text {
+    grid-column: 1/2;
+    grid-row: 1/2;}
+.questions_contact {
+    grid-column: 1/2;
+    grid-row: 2/3;}
+.accordion {
+    grid-column: 2/4;
+    grid-row: 1/5;}
+
 
 
 /* Page seven - Newsletter */
@@ -1463,7 +1504,6 @@ footer {
 
 
 }
-
 
 
 /* DARKMODE */
@@ -1498,6 +1538,14 @@ footer {
     
 
     /* PAGE ONE */
+    .appimg-light {
+        display: none;
+    }
+
+    .appimg-dark {
+        display: block;
+    }
+
     .vectorarrow {
         background-color: rgba(255, 255, 255, 0.05);
         .arrow-dark {
@@ -1536,4 +1584,4 @@ footer {
 
 
 
-}
+} 
