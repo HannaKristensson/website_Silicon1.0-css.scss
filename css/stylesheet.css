@@ -142,6 +142,10 @@ button {
     text-decoration: none;
 }
 
+.btn_primary:active {
+    background-color: hsla(239, 70%, 56%, 0.1);
+}
+
 
 .container {
     width: 100%;
@@ -390,6 +394,10 @@ header .container {
     }
 }
 
+.vectorarrow:active {
+    background-color: #4f51d6;
+}
+
 .arrowdown {
     padding: 1rem;
     position: absolute;
@@ -402,6 +410,8 @@ header .container {
 .discover-btn {
     gap: 1.5rem;
     display: flex;
+    justify-content: center;
+    align-items: center;
     p {
         font-size: var(--fontsize-14);
     }
@@ -1044,6 +1054,7 @@ header .container {
     "applink p1_img"
     "btn p1_img";
 
+
     p {
         text-align: left;
     }
@@ -1051,10 +1062,7 @@ header .container {
 
 .maintext {
     margin-top: 4rem;
-    margin-left: 0;
-}
-#main {
-margin-left: 0;
+    /* margin-left: 0; */
 }
 
 .maintext_1 {
@@ -1309,7 +1317,7 @@ header .container {
 /* PAGES */
 /* Page one */
 .page-one {
-    gap: 0;
+    gap: 1rem;
     h1 {
         text-align: left;
     }
@@ -1321,6 +1329,12 @@ header .container {
 
     grid-template-rows: 1fr 1fr 1fr 3fr;
 
+    div {
+        margin-left: 0;
+        margin-top: 2rem;
+        max-width: 700px;
+    }
+
     
     .title {
         margin-top: 5.5rem;
@@ -1328,6 +1342,7 @@ header .container {
     }
     
     .maintext {
+        margin-top: 1rem;
         margin-left: var(--container-padding);
         max-width: 30rem;
     }
@@ -1335,18 +1350,22 @@ header .container {
     .applink {
         margin-top: 1rem;
         margin-left: var(--container-padding);
-        max-width: 22rem;
+        max-width: 25rem;
         
-        .appimg {
-            max-height: 1.8rem;
-        }
     }
     
+    .appimg-light, .appimg-dark {
+        max-height: 2.2rem;
+    }
 }
 
 .discover-btn {
-    margin-top: 6rem;
+    margin-top: 3rem;
+    /* justify-content: left; */
+    padding-left: 1rem;
+
 }
+
 
 
 /* Page two - Features */
@@ -1373,7 +1392,6 @@ header .container {
 }
 
 .feature_phone {
-    /* min-height: 20rem; */
     max-height: 42rem;
     margin-right: 6rem;
 }
@@ -1506,9 +1524,42 @@ header .container {
     
     p, h1, h2, h3, h4, h5, a, .btn-mobile {
         color: var(--color-white)}
+        
+    .background-clr {
+        background-color: rgba(255, 255, 255, 0.07);
+    }
 
+    .btn_primary:active {
+        background-color: hsla(239, 70%, 56%, 0.3);
+    }
+
+    
+    
+    /* HEADER */
+    .logo_dark {
+        display: none;
+    }
+    
+    .logo_light {
+        display: block;
+    }
+
+    
+    /* PAGE ONE */
+    .appimg-light {
+        display: none;
+    }
+    
+    .appimg-dark {
+        display: block;
+    }
+    
     .appbtn {
         background-color: #EFF2FC;
+    }
+
+    .appbtn:hover {
+        box-shadow: 0px 8px 18px -8px rgba(255, 255, 255, 0.5);
     }
 
     .discover-btn {
@@ -1518,29 +1569,6 @@ header .container {
         .img {
             opacity: none;
         }
-    }
-
-    .background-clr {
-        background-color: rgba(255, 255, 255, 0.07);
-    }
-
-    /* HEADER */
-    .logo_dark {
-        display: none;
-    }
-
-    .logo_light {
-        display: block;
-    }
-    
-
-    /* PAGE ONE */
-    .appimg-light {
-        display: none;
-    }
-
-    .appimg-dark {
-        display: block;
     }
 
     .vectorarrow {
@@ -1555,6 +1583,10 @@ header .container {
 
     .vectorarrow:hover {
         background-color: var(--color-primary);
+    }
+
+    .vectorarrow:active {
+        background-color: #4f51d6;
     }
 
     /* PAGE TWO */
