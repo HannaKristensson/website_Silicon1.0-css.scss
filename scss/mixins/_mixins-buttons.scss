@@ -1,0 +1,20 @@
+@mixin button-colors($bg-color, $text-color, $hover-bg-color, $hover-text-color,$border-color: null, $hover-border-color: null) {
+    background-color: $bg-color;
+    color: $text-color;
+    border-color: if($border-color,$border-color, &bg-color);
+
+    &:hover {
+        background-color: $hover-bg-color;
+        color: &hover-text-color;
+        border-color: if($hover-border-color: null,$hover-border-color: null, &hover-bg-color);
+    }
+
+}
+
+
+@mixin btn {
+
+    &:hover {
+        color:;
+    }
+}
