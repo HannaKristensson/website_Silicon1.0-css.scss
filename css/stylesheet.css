@@ -167,6 +167,11 @@ button {
     gap: 2rem;
 }
 
+.image {
+    height: 100%;
+    width: 100%;
+}
+
 
 /* HEADER */
 header .container {
