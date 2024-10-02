@@ -5,3 +5,14 @@ a {
         color: var(--color-primary);
     }
 }
+
+.darkmode {
+    a {
+        color: var(--color-white);
+
+        &:hover, &:active {
+            color: var(--color-primary);
+        }
+    }
+
+}

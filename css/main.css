@@ -32,6 +32,7 @@ body {
   --color-primary: #6366F1;
   --color-primary-active: hsla(239, 70%, 56%, 0.1);
   --color-dark-btn: hsla(0, 0%, 100%, 0.07);
+  --color-dark-active:hsla(239, 70%, 56%, 0.3);
   --color-success: #22C55E;
   --txtclr-heading: #131022;
   --color-gray900: #0B0F19;
@@ -55,26 +56,11 @@ body {
   -webkit-tap-highlight-color: transparent;
 }
 .btn-pri:hover {
-  background-color: var(--color-white);
+  background-color: var(--color-transparent);
   color: var(.btn-pri:hover hover-text-color);
   border-color: var(--color-primary);
 }
 .btn-pri:active {
-  background-color: var(--color-primary-active);
-}
-
-.btn-dark {
-  background-color: var(--color-dark-btn);
-  color: var(--color-gray800);
-  border-color: var(--color-primary);
-  -webkit-tap-highlight-color: transparent;
-}
-.btn-dark:hover {
-  background-color: var(--color-white);
-  color: var(.btn-dark:hover hover-text-color);
-  border-color: var(--color-primary);
-}
-.btn-dark:active {
   background-color: var(--color-primary-active);
 }
 
@@ -85,10 +71,35 @@ body {
   box-shadow: 0px 8px 18px -8px var(--txtclr-heading);
 }
 
+.darkmode .btn-pri {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  border-color: var(--color-primary);
+  -webkit-tap-highlight-color: transparent;
+}
+.darkmode .btn-pri:hover {
+  background-color: var(--color-transparent);
+  color: var(.darkmode .btn-pri:hover hover-text-color);
+  border-color: var(--color-primary);
+}
+.darkmode .btn-pri:active {
+  background-color: var(--color-dark-active);
+}
+.darkmode .btn-pri .btn-mobile {
+  color: var(--color-white);
+}
+
 a {
   color: var(--color-gray800);
 }
 a:hover, a:active {
+  color: var(--color-primary);
+}
+
+.darkmode a {
+  color: var(--color-white);
+}
+.darkmode a:hover, .darkmode a:active {
   color: var(--color-primary);
 }
 
@@ -116,13 +127,32 @@ input::placeholder {
   color: var(--color-gray500);
 }
 
+.darkmode p, .darkmode h1, .darkmode h2, .darkmode h3, .darkmode h4, .darkmode h5 {
+  color: var(--color-white);
+}
+
+body {
+  background-color: var(--color-white);
+}
+
 .gradient {
   background: rgb(99, 102, 241);
   background: linear-gradient(0deg, rgba(99, 102, 241, 0.1) 0%, rgba(218, 70, 239, 0.05) 42%, rgba(241, 244, 253, 0.07) 83%);
 }
 
-.lightmode {
+.background-clr {
+  background-color: var(--color-gray100);
+}
+
+.darkmode {
   background-color: var(--color-gray900);
+}
+.darkmode .gradient {
+  background: rgb(99, 102, 241);
+  background: linear-gradient(0deg, rgba(99, 102, 241, 0.1) 0%, rgba(218, 70, 239, 0.05) 50%, rgba(19, 16, 35, 0.01) 83%);
+}
+.darkmode .background-clr {
+  background-color: hsla(0, 0%, 100%, 0.07);
 }
 
 .container {
