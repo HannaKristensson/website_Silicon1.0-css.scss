@@ -1368,6 +1368,15 @@ header .container {
 }
 
 
+#brand5, #brand6 {
+    display: block;
+}
+
+.brands-container {
+    grid-template-columns: repeat(6, 1fr);
+}
+
+
 
 /* Page two - Features */
 .page_features {
