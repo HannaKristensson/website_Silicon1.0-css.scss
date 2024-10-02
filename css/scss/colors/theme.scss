@@ -1,4 +1,7 @@
+@import "./mixins/mixins-clr";
+
 @import "./root-clr";
+@import "./buttons-clr";
 @import "./links-clr";
 @import "./typography-clr";
-@import "./buttons-clr";
+@import "./light-theme.scss";

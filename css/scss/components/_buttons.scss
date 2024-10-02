@@ -10,5 +10,13 @@
 
 .btn-menu {
     @include btn;
-    
+
+}
+
+.appbtn {
+    @include btn;
+    padding: .5rem;
+    width: 100%;
+    border-radius: .5rem;
+
 }

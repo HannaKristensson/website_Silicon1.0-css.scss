@@ -4,10 +4,10 @@
 
 @import "./misc/base";
 
-@import "./colors/root-colors";
-@import "./colors/light-theme.scss";
+@import "./colors/theme.scss";
 
-@import "./components/container";
+
+@import "./components/container.scss";
 @import "./components/links";
 // @import "./components/wrapper";
 @import "./components/buttons";

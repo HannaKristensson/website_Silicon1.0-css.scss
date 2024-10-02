@@ -1,20 +1,3 @@
-@mixin button-colors($bg-color, $text-color, $hover-bg-color, $hover-text-color, $border-color: null, $hover-border-color: null) {
-    background-color: $bg-color;
-    color: $text-color;
-    border-color: if($border-color,$border-color, &bg-color);
-
-    &:hover {
-        background-color: $hover-bg-color;
-        color: &hover-text-color;
-        // border-color: if( $hover-border-color: null, &hover-bg-color);
-    }
-
-    // &:hover, &:focus, &:active {
-    //     outline: none;
-    // }
-
-}
-
 @mixin btn {
     @include text;
     border: none;
@@ -23,7 +6,6 @@
 }
 
 @mixin btn_base {
-    @include center-screen;
     border: 1px solid;
     border-radius: 5px;
     padding: .5rem 1.5rem;

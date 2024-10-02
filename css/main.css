@@ -27,6 +27,84 @@ body {
   color: #585C7B;
 }
 
+:root {
+  --color-dark: #0B0F19;
+  --color-primary: #6366F1;
+  --color-primary-active: hsla(239, 70%, 56%, 0.1);
+  --color-success: #22C55E;
+  --txtclr-heading: #131022;
+  --color-gray900: #0B0F19;
+  --color-gray800: #33354D;
+  --color-gray700: #565973;
+  --color-gray600: #9397AD;
+  --color-gray500: #B4B7C9;
+  --color-gray400: #D4D7E5;
+  --color-gray300: #E2E5F1;
+  --color-gray200: #EFF2FC;
+  --color-gray100: #F3F6FF;
+  --color-breadtext: #585C7B;
+  --color-white: #fff;
+  --color-transparent: transparent;
+}
+
+.btn-pri {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  border-color: var(--color-primary);
+  -webkit-tap-highlight-color: transparent;
+}
+.btn-pri:hover {
+  background-color: var(--color-white);
+  color: var(.btn-pri:hover hover-text-color);
+  border-color: var(--color-primary);
+}
+.btn-pri:active {
+  background-color: var(--color-primary-active);
+}
+
+.appbtn {
+  background-color: var(--txtclr-heading);
+}
+.appbtn:hover {
+  box-shadow: 0px 8px 18px -8px var(--txtclr-heading);
+}
+
+a {
+  color: var(--color-gray800);
+}
+a:hover, a:active {
+  color: var(--color-primary);
+}
+
+p {
+  color: var(--color-breadtext);
+}
+
+h1, h2, h3, h4, h5 {
+  color: var(--txtclr-heading);
+}
+
+h6 {
+  color: var(--color-gray900);
+}
+
+li {
+  color: var(--color-breadtext);
+}
+
+input::-moz-placeholder {
+  color: var(--color-gray500);
+}
+
+input::placeholder {
+  color: var(--color-gray500);
+}
+
+.gradient {
+  background: rgb(99, 102, 241);
+  background: linear-gradient(0deg, rgba(99, 102, 241, 0.1) 0%, rgba(218, 70, 239, 0.05) 42%, rgba(241, 244, 253, 0.07) 83%);
+}
+
 .container {
   width: 100%;
   margin-left: auto;
@@ -52,9 +130,10 @@ a {
   font-style: normal;
   font-optical-sizing: auto;
   text-decoration: none;
+  font-weight: 600;
 }
 a:hover {
-  text-decoration: underline;
+  text-decoration: none;
 }
 a[target=_blank]::after {
   content: "\f08e";
@@ -72,9 +151,6 @@ a[target=_blank]::after {
   border: none;
   cursor: pointer;
   transition: all 0.15s;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   border: 1px solid;
   border-radius: 5px;
   padding: 0.5rem 1.5rem;
@@ -96,9 +172,6 @@ a[target=_blank]::after {
   border: none;
   cursor: pointer;
   transition: all 0.15s;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   border: 1px solid;
   border-radius: 5px;
   padding: 0.5rem 1.5rem;
@@ -120,6 +193,19 @@ a[target=_blank]::after {
   border: none;
   cursor: pointer;
   transition: all 0.15s;
+}
+
+.appbtn {
+  font-family: "Manrope", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-optical-sizing: auto;
+  border: none;
+  cursor: pointer;
+  transition: all 0.15s;
+  padding: 0.5rem;
+  width: 100%;
+  border-radius: 0.5rem;
 }
 
 p {
@@ -180,5 +266,14 @@ h5 {
 h6 {
   font-size: 1em;
   font-weight: 700;
-  color: var(--color-gray900);
+}
+
+input::-moz-placeholder {
+  font-size: var(--fontsize-16);
+  font-family: fontAwesome, "Manrope", sans-serif;
+}
+
+input::placeholder {
+  font-size: var(--fontsize-16);
+  font-family: fontAwesome, "Manrope", sans-serif;
 }/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,14 @@
+.btn-pri {
+    @include button-colors (--color-primary, --color-white, --color-white, --color-primary, --color-primary, --color-primary, --color-primary-active);
+}
+
+.appbtn {
+    background-color: var(--txtclr-heading);
+    &:hover {
+        box-shadow: 0px 8px 18px -8px var(--txtclr-heading);
+    }
+}
+
+// .btn-menu {
+
+// }

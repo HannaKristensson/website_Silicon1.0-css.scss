@@ -1,6 +1,7 @@
 :root {
   --color-dark: #0B0F19;
   --color-primary: #6366F1;
+  --color-primary-active: hsla(239, 70%, 56%, 0.1);
   --color-success: #22C55E;
   --txtclr-heading: #131022;
   --color-gray900: #0B0F19;
@@ -14,12 +15,35 @@
   --color-gray100: #F3F6FF;
   --color-breadtext: #585C7B;
   --color-white: #fff;
+  --color-transparent: transparent;
+}
+
+.btn-pri {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  border-color: var(--color-primary);
+  -webkit-tap-highlight-color: transparent;
+}
+.btn-pri:hover {
+  background-color: var(--color-white);
+  color: var(.btn-pri:hover hover-text-color);
+  border-color: var(--color-primary);
+}
+.btn-pri:active {
+  background-color: var(--color-primary-active);
+}
+
+.appbtn {
+  background-color: var(--txtclr-heading);
+}
+.appbtn:hover {
+  box-shadow: 0px 8px 18px -8px var(--txtclr-heading);
 }
 
 a {
-  color: var(--color-primary);
+  color: var(--color-gray800);
 }
-a:hover {
+a:hover, a:active {
   color: var(--color-primary);
 }
 
@@ -45,4 +69,9 @@ input::-moz-placeholder {
 
 input::placeholder {
   color: var(--color-gray500);
+}
+
+.gradient {
+  background: rgb(99, 102, 241);
+  background: linear-gradient(0deg, rgba(99, 102, 241, 0.1) 0%, rgba(218, 70, 239, 0.05) 42%, rgba(241, 244, 253, 0.07) 83%);
 }/*# sourceMappingURL=theme.css.map */

@@ -1,7 +1,7 @@
 a {
-    color: var(--color-primary);
+    color: var(--color-gray800);
 
-    &:hover {
+    &:hover, &:active {
         color: var(--color-primary);
     }
 }
