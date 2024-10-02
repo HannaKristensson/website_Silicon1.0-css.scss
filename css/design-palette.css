@@ -1,0 +1,8 @@
+/* Designa grundpbjekt, länkar paragrafer, rubriker, knappar, färger, färgkompinationer, storlekar */
+
+.design-palette .container {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    max-width: 1920px;
+}
