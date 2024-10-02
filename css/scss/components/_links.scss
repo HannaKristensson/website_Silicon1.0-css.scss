@@ -1,11 +1,19 @@
 a {
-    color: var(--color-primary);
-    text-decoration: none;
-
     @include text;
+    text-decoration: none;
+    // font-weight: 600;
 
     &:hover {
-        color: var(--color-primary);
         text-decoration: underline;
     }
+
+    &[target="_blank"]::after {
+        content: "\f08e";
+        font-family: "font awesome 5 free";
+        display: inline-block;
+        vertical-align: middle;
+        font-size: 0.2em;
+
+    }
 }
+

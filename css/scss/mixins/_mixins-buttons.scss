@@ -16,12 +16,17 @@
 }
 
 @mixin btn {
-    display: flex;
+    @include text;
+    border: none;
+    cursor: pointer;
+    transition: all 0.15s;
+}
+
+@mixin btn_base {
+    @include center-screen;
     border: 1px solid;
     border-radius: 5px;
     padding: .5rem 1.5rem;
-    justify-content: center;
-    align-items: center;
     text-decoration: none;
     font-weight: 500;
     transition: 0.2s;
@@ -32,6 +37,8 @@
         text-decoration: none;
     }
 }
+
+
 
 // Kan användas på detta sätt:
 // a {

@@ -9,7 +9,7 @@
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
-html, body, section, div, header, footer, main, aside, nav, blockquote {
+html, body, section, div, header, footer, main, aside, nav, blockquote, p, span {
   margin: 0;
   padding: 0;
 }
@@ -22,6 +22,7 @@ body {
   font-family: "Manrope", sans-serif;
   font-weight: 400;
   font-style: normal;
+  font-optical-sizing: auto;
   font-size: 18px;
   color: #585C7B;
 }
@@ -46,24 +47,37 @@ body {
 }
 
 a {
-  color: var(--color-primary);
-  text-decoration: none;
   font-family: "Manrope", sans-serif;
   font-weight: 400;
   font-style: normal;
+  font-optical-sizing: auto;
+  text-decoration: none;
 }
 a:hover {
-  color: var(--color-primary);
   text-decoration: underline;
+}
+a[target=_blank]::after {
+  content: "\f08e";
+  font-family: "font awesome 5 free";
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 0.2em;
 }
 
 .btn_primary {
+  font-family: "Manrope", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-optical-sizing: auto;
+  border: none;
+  cursor: pointer;
+  transition: all 0.15s;
   display: flex;
+  justify-content: center;
+  align-items: center;
   border: 1px solid;
   border-radius: 5px;
   padding: 0.5rem 1.5rem;
-  justify-content: center;
-  align-items: center;
   text-decoration: none;
   font-weight: 500;
   transition: 0.2s;
@@ -72,4 +86,99 @@ a:hover {
 .btn_primary:hover {
   transition: 0.2s;
   text-decoration: none;
+}
+
+.btn_primary-dark {
+  font-family: "Manrope", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-optical-sizing: auto;
+  border: none;
+  cursor: pointer;
+  transition: all 0.15s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid;
+  border-radius: 5px;
+  padding: 0.5rem 1.5rem;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.2s;
+  cursor: pointer;
+}
+.btn_primary-dark:hover {
+  transition: 0.2s;
+  text-decoration: none;
+}
+
+.btn-menu {
+  font-family: "Manrope", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-optical-sizing: auto;
+  border: none;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+p {
+  padding-bottom: 1em;
+}
+
+.p18 {
+  line-height: 1.8rem;
+  font-size: 1.125rem;
+}
+
+.p16 {
+  line-height: 1.6rem;
+  font-size: 1rem;
+}
+
+.p14 {
+  line-height: 1.4rem;
+  font-size: 0.875rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Manrope", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-optical-sizing: auto;
+  margin-top: 0;
+  margin-bottom: 0.5em;
+  line-height: 1.4;
+  font-weight: 800;
+}
+
+h1 {
+  font-size: 2.5em;
+}
+
+h2 {
+  font-size: 1.8em;
+}
+
+h3 {
+  font-size: 1.7em;
+}
+@media tablet {
+  h3 {
+    font-size: 2em;
+  }
+}
+
+h4 {
+  font-size: 1.5em;
+}
+
+h5 {
+  font-size: 1.25em;
+}
+
+h6 {
+  font-size: 1em;
+  font-weight: 700;
+  color: var(--color-gray900);
 }/*# sourceMappingURL=main.css.map */
