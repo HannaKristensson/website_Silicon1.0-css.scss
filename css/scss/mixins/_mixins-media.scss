@@ -13,7 +13,7 @@
     }
 }
 
-@mixin desctop {
+@mixin desktop {
     @media (min-width: 1200px) {
         @content
     }

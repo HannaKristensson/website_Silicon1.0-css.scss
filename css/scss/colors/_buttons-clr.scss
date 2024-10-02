@@ -6,6 +6,14 @@
 //     @include button-colors (--color-dark-btn, --color-gray800, --color-white, --color-primary, --color-primary, --color-primary, --color-primary-active);
 // }
 
+.btn-mobile {
+    background-color: transparent;
+    font-size: 1.4em;
+    &:hover {
+        color: var(--color-primary);
+    }
+}
+
 .appbtn {
     background-color: var(--txtclr-heading);
     &:hover {
@@ -13,14 +21,69 @@
     }
 }
 
-// .btn-mobile {
- 
-// }
+//  Toggler
+.btn-toggle-switch {
+    
+}
+
+.label {
+    color: var(--txtclr-heading);
+    font-size: (--fontsize-16);
+
+    @include desktop {
+            color: pink;
+    }
+    
+            
+        
+}
+
+.toggle-switch input:checked + .slider {
+    background-color: var(--color-primary);
+}
+
+
+.toggle-switch input:focus + .slider {
+    box-shadow: 0 0 1px var(--color-primary);
+    box-shadow: 0px 8px 18px -8px #6366F1;
+}
+
+.toggle-switch input:checked + .slider:before {
+    background-color: var(--color-white);  
+}
+
+.toggle-switch .slider {
+    background-color: var(--color-gray600);
+    box-shadow: 0px 8px 18px -8px #6366F1;
+}
+
+.toggle-switch .slider:before {
+    background-color: var(--color-white);
+}
+
+/* Arrow button */
+.btn_arrow {
+    background-color: var(--color-white);
+
+    &:hover {
+        background-color: var(--color-primary);
+        box-shadow: 0px -8px 18px -8px rgba(99, 101, 241, 0.8);
+    }
+
+    &:active {
+        background-color: #4f51d6;
+    }
+}
+
+
+
+
+
 
 .darkmode {
     .btn-pri {
         @include button-colors (--color-primary, --color-white, --color-transparent, --color-primary, --color-primary, --color-primary, --color-dark-active);
-        
+
         .btn-mobile {
             color: var(--color-white);
         }

@@ -28,6 +28,7 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
     font-size: 2.5em;
+    
 }
 
 h2 {
@@ -37,10 +38,6 @@ h2 {
 
 h3 {
     font-size: 1.7em;
-
-    @media tablet {
-        font-size: 2em;
-    }
 }
 
 h4 {
@@ -59,4 +56,49 @@ h6 {
 input::placeholder {
     font-size: var(--fontsize-16);
     font-family: fontAwesome, "Manrope", sans-serif;
+}
+
+.navbar {
+    font-size: var(--fontsize-16);
+    font-weight: 600;
+}
+
+// Page one 
+.discover-btn {
+    p {
+        font-size: var(--fontsize-14);
+    }
+}
+
+@media ( min-width: 768px ) {
+    
+h1 {
+    font-size: 2.75rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 2em;
+}
+
+h4 {
+    font-size: 1.4rem;
+}
+}
+
+@media (min-width : 1200px) {
+    h1 {
+        font-size: 3.5rem; 
+    }
+    
+    h2 {
+        font-size: 2.5rem;
+    }
+    
+    h4 {
+        font-size: 1.5rem;
+    }
 }

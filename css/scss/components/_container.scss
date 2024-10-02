@@ -5,12 +5,12 @@
     padding-left: 1rem;
     padding-right: 1rem;
 
-    @media tablet {
+    @include tablet {
         padding-left: 2rem;
         padding-right: 2rem;
     }
 
-    @media desktop {
+    @include desktop {
         max-width: 1295px;
     }
 }

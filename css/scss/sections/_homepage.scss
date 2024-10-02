@@ -1,0 +1,146 @@
+/* PAGE ONE */
+.page-one {
+    display: grid;
+    grid-template-areas: 
+        "title" 
+        "maintext"
+        "applink"
+        "btn";
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+
+    div {
+        max-width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.title { grid-area: title;}
+.maintext {grid-area: maintext;}
+.applink {grid-area: applink;}
+.discover-btn {grid-area: btn;}
+
+.page-one_img{
+    display: none;
+}
+
+/* title & maintext */
+.maintext_2 {
+    display: none;
+}
+
+/* app buttons */
+.applink {
+    gap: 1rem;
+    width: 100%;
+    
+    @include mid-screen {
+            grid-template-columns: 1fr 1fr;
+    }
+
+}
+
+.appimg-light, .appimg-dark {
+    height: 2.5rem;
+}
+
+.appimg-dark {
+    display: none;
+}
+
+@media ( min-width: 768px ) {
+.page-one {
+    height:80svh;
+    gap: 2rem;
+    overflow: hidden;
+    grid-template-columns: 1fr auto;
+    grid-template-areas: 
+    "title title"
+    "maintext p1_img"
+    "applink p1_img"
+    "btn p1_img";
+
+
+    p {
+        text-align: left;
+    }
+}
+
+.maintext {
+    margin-top: 4rem;
+}
+
+.maintext_1 {
+    display: none;
+}
+
+.maintext_2 {
+    display: block;
+
+.page-one_img {
+    display:inline;
+    grid-area: p1_img;  
+}
+
+.img-front {
+    display: block;
+    right: 0;
+}
+}
+
+
+.page-one_img {
+    display:inline;
+    grid-area: p1_img;  
+}
+
+.img-front {
+    display: block;
+    right: 0;
+}
+}
+
+@media (min-width : 1200px) {
+    .page-one {
+        gap: 1rem;
+        h1 {
+            text-align: left;
+        }
+        grid-template-areas: 
+        "title p1_img"
+        "maintext p1_img"
+        "applink p1_img"
+        "btn p1_img";
+    
+        grid-template-rows: 1fr 1fr 1fr 3fr;
+    
+        div {
+            margin-left: 0;
+            margin-top: 2rem;
+            max-width: 700px;
+        }
+    
+        
+        .title {
+            margin-top: 5.5rem;
+            margin-left: var(--container-padding);
+        }
+        
+        .maintext {
+            margin-top: 1rem;
+            margin-left: var(--container-padding);
+            max-width: 30rem;
+        }
+    
+        .applink {
+            margin-top: 1rem;
+            margin-left: var(--container-padding);
+            max-width: 25rem;
+            
+        }
+        
+        .appimg-light, .appimg-dark {
+            max-height: 2.2rem;
+        }
+    }
+}

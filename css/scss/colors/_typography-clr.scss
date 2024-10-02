@@ -18,7 +18,23 @@ input::placeholder {
     color: var(--color-gray500);
 }
 
+.navbar {
+    color: var(--color-gray800);
+}
+
+
+
 .darkmode {
     p, h1, h2, h3, h4, h5{
         color: var(--color-white)}
 }
+
+@media (min-width : 1200px) {
+    p {
+        color: var(--color-gray700);
+    }
+    
+    li {
+        color: var(--color-gray700);
+    }
+ }

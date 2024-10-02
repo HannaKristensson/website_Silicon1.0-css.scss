@@ -1,0 +1,64 @@
+// HEADER
+header .container {
+    display: grid;
+    align-items: center;
+    grid-template-columns: auto 3fr auto auto auto;
+    gap: 1.5rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.logo_light {
+    display: none;
+}
+
+.navbar {
+    display: none;
+}
+
+.sign-in {
+    display: none;
+    margin-right: 0.5rem;
+    i {
+        margin-right: .3rem;
+    }
+}
+
+@media ( min-width: 768px ) { 
+    .btn-toggle-switch .label {
+        display: inline-block;
+    }
+
+    .toggle-switch .slider.round {
+        box-shadow: none;
+    }
+
+    .toggle-switch input:focus + .slider {
+        box-shadow: none;
+    }
+
+    header .container {
+        grid-template-columns: auto 3fr  auto auto auto;
+        gap: 3rem;
+    }
+
+}
+
+@media (min-width: 1200px) {
+    .navbar  {
+        display: block;
+    }
+    
+    header .container {
+        grid-template-columns: auto auto 3fr auto auto;
+        gap: 3rem;
+    }
+    
+    #sign-in {
+        display: block;
+    }
+    
+    .btn-mobile {
+        display: none;
+    }
+}

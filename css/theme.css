@@ -35,11 +35,58 @@
   background-color: var(--color-primary-active);
 }
 
+.btn-mobile {
+  background-color: transparent;
+  font-size: 1.4em;
+}
+.btn-mobile:hover {
+  color: var(--color-primary);
+}
+
 .appbtn {
   background-color: var(--txtclr-heading);
 }
 .appbtn:hover {
   box-shadow: 0px 8px 18px -8px var(--txtclr-heading);
+}
+
+.btn-toggle-switch .label {
+  color: var(--txtclr-heading);
+  font-size: --fontsize-16;
+}
+
+.toggle-switch input:checked + .slider {
+  background-color: var(--color-primary);
+}
+
+.toggle-switch input:focus + .slider {
+  box-shadow: 0 0 1px var(--color-primary);
+  box-shadow: 0px 8px 18px -8px #6366F1;
+}
+
+.toggle-switch input:checked + .slider:before {
+  background-color: var(--color-white);
+}
+
+.toggle-switch .slider {
+  background-color: var(--color-gray600);
+  box-shadow: 0px 8px 18px -8px #6366F1;
+}
+
+.toggle-switch .slider:before {
+  background-color: var(--color-white);
+}
+
+/* Arrow button */
+.btn_arrow {
+  background-color: var(--color-white);
+}
+.btn_arrow:hover {
+  background-color: var(--color-primary);
+  box-shadow: 0px -8px 18px -8px rgba(99, 101, 241, 0.8);
+}
+.btn_arrow:active {
+  background-color: #4f51d6;
 }
 
 .darkmode .btn-pri {
@@ -98,10 +145,22 @@ input::placeholder {
   color: var(--color-gray500);
 }
 
+.navbar {
+  color: var(--color-gray800);
+}
+
 .darkmode p, .darkmode h1, .darkmode h2, .darkmode h3, .darkmode h4, .darkmode h5 {
   color: var(--color-white);
 }
 
+@media (min-width: 1200px) {
+  p {
+    color: var(--color-gray700);
+  }
+  li {
+    color: var(--color-gray700);
+  }
+}
 body {
   background-color: var(--color-white);
 }
