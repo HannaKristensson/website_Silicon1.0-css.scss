@@ -22,6 +22,15 @@ input::placeholder {
     color: var(--color-gray800);
 }
 
+.label {
+    color: var(--txtclr-heading);
+    font-size: (--fontsize-16);
+
+    @include desktop {
+        color: var(--color-gray700);
+    }    
+}
+
 
 
 .darkmode {

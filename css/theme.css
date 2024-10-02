@@ -50,9 +50,11 @@
   box-shadow: 0px 8px 18px -8px var(--txtclr-heading);
 }
 
-.btn-toggle-switch .label {
-  color: var(--txtclr-heading);
-  font-size: --fontsize-16;
+.btn-toggle-switch {
+  position: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
 }
 
 .toggle-switch input:checked + .slider {

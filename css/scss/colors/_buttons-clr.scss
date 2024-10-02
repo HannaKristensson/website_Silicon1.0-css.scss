@@ -23,19 +23,10 @@
 
 //  Toggler
 .btn-toggle-switch {
-    
-}
-
-.label {
-    color: var(--txtclr-heading);
-    font-size: (--fontsize-16);
-
-    @include desktop {
-            color: pink;
-    }
-    
-            
-        
+    position: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
 }
 
 .toggle-switch input:checked + .slider {

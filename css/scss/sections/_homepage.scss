@@ -33,11 +33,6 @@
 .applink {
     gap: 1rem;
     width: 100%;
-    
-    @include mid-screen {
-            grid-template-columns: 1fr 1fr;
-    }
-
 }
 
 .appimg-light, .appimg-dark {
@@ -99,6 +94,13 @@
     right: 0;
 }
 }
+
+@media (min-width : 950px) {
+
+    .applink {
+        grid-template-columns: 1fr 1fr;
+        }
+    }
 
 @media (min-width : 1200px) {
     .page-one {
