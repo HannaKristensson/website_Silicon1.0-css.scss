@@ -1,4 +1,13 @@
+// Standardformateringen som gäller alla texter, men inte alla rubrikers teckenstorlekar tex
+
 @mixin text {
     font-family: "Manrope", sans-serif;
     font-weight: 400;
+    font-style: normal;
 }
+
+@mixin heading {
+    @include text
+    // font-weight: 600;
+}
+

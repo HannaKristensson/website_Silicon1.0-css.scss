@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
+@media (prefers-reduced-motion: no-preference) {
+  :root {
+    scroll-behavior: smooth;
+  }
+}
+*, *::before, *::after {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+html, body, section, div, header, footer, main, aside, nav, blockquote {
+  margin: 0;
+  padding: 0;
+}
+
+img, svg {
+  vertical-align: middle;
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 18px;
+  color: #585C7B;
+}
+
+.container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+@media tablet {
+  .container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+@media desktop {
+  .container {
+    max-width: 1295px;
+  }
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+  font-family: "Manrope", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+a:hover {
+  color: var(--color-primary);
+  text-decoration: underline;
+}
+
+.btn_primary {
+  display: flex;
+  border: 1px solid;
+  border-radius: 5px;
+  padding: 0.5rem 1.5rem;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.2s;
+  cursor: pointer;
+}
+.btn_primary:hover {
+  transition: 0.2s;
+  text-decoration: none;
+}/*# sourceMappingURL=main.css.map */

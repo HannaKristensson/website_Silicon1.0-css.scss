@@ -1,4 +1,4 @@
-// Teckensnitt 
+// Teckensnitt, bodyns utseende, speciella formateingar, stänga av padding..
 @charset "utf-8";
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
 
@@ -10,7 +10,7 @@
 
 *, *::before, *::after {
     box-sizing: border-box;
-    -webkit-tap-highlight-color: black;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 
 html, body, section, div, header, footer, main, aside, nav, blockquote {
@@ -24,6 +24,6 @@ img, svg {
 
 body {
     @include text;
-    // font-size: ;
-    // color: white;
+    font-size: 18px;
+    color: #585C7B;
 }

@@ -1,4 +1,4 @@
-@mixin button-colors($bg-color, $text-color, $hover-bg-color, $hover-text-color,$border-color: null, $hover-border-color: null) {
+@mixin button-colors($bg-color, $text-color, $hover-bg-color, $hover-text-color, $border-color: null, $hover-border-color: null) {
     background-color: $bg-color;
     color: $text-color;
     border-color: if($border-color,$border-color, &bg-color);
@@ -6,15 +6,35 @@
     &:hover {
         background-color: $hover-bg-color;
         color: &hover-text-color;
-        border-color: if($hover-border-color: null,$hover-border-color: null, &hover-bg-color);
+        // border-color: if( $hover-border-color: null, &hover-bg-color);
     }
 
-}
+    // &:hover, &:focus, &:active {
+    //     outline: none;
+    // }
 
+}
 
 @mixin btn {
+    display: flex;
+    border: 1px solid;
+    border-radius: 5px;
+    padding: .5rem 1.5rem;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.2s;
+    cursor: pointer;
 
     &:hover {
-        color:white;
+        transition: 0.2s;
+        text-decoration: none;
     }
 }
+
+// Kan användas på detta sätt:
+// a {
+//     @include btn;
+    // @include button-colors(-color, -color, -bg-color, -text-color, -color, -border-color);
+// }

@@ -1,8 +1,6 @@
+// mixins längst upp, men vid variabler så bör dem ev behöva vara längst upp
+
 @import "./mixins/mixins";
-@import "./mixins/mixins-buttons";
-@import "./mixins/_mixins-content";
-@import "./mixins/mixins-media";
-@import "./mixins/mixins-typography";
 
 @import "./misc/base";
 
@@ -11,3 +9,5 @@
 @import "./components/container";
 @import "./components/links";
 @import "./components/wrapper";
+@import "./components/buttons";
+
