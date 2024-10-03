@@ -1,4 +1,5 @@
 p {
+    @include text;
     padding-bottom: 1em;
     // border: 1px solid green;
 }
@@ -23,7 +24,6 @@ h1, h2, h3, h4, h5, h6 {
     margin-top: 0;
     margin-bottom: .5em;
     line-height: 1.4;
-    font-weight: 800;
 }
 
 h1 {
@@ -71,22 +71,21 @@ input::placeholder {
 }
 
 @media ( min-width: 768px ) {
-    
-h1 {
-    font-size: 2.75rem;
-}
+    h1 {
+        font-size: 2.75rem;
+    }
 
-h2 {
-    font-size: 2rem;
-}
+    h2 {
+        font-size: 2rem;
+    }
 
-h3 {
-    font-size: 2em;
-}
+    h3 {
+        font-size: 2em;
+    }
 
-h4 {
-    font-size: 1.4rem;
-}
+    h4 {
+        font-size: 1.4rem;
+    }
 }
 
 @media (min-width : 1200px) {
