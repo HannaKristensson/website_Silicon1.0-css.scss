@@ -1,0 +1,124 @@
+// PAGE THREE - HOW DOES IT WORK
+.page_how {
+    position: grid;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    justify-content: center;
+    align-items: center;
+
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto;
+    gap: 2rem;
+}
+.how_t2 {
+    display: none;
+}
+
+.how_phone1, .how_phone3 {
+    display: none;
+}
+
+.how_phone2 {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 10;
+}
+
+.how_phone-top {
+    height: 100%;
+    width: 100%;
+    position:absolute;
+    right: 0;
+    top: 0;
+    z-index: 1;
+}
+
+.how_phone-middle {
+    position: relative;
+    height: 34rem;
+    width: 17rem;
+}
+
+.how_text {
+    h4 {
+        margin-left: 3rem;
+        margin-right: 3rem;
+    }
+
+    p {
+        margin-top: 1rem;
+        font-size: var(--fontsize-16);
+    }
+}
+
+@media ( min-width: 768px ) {
+    .page_how {
+        position: grid;
+        grid-template-rows: 1fr auto auto;
+        grid-template-columns: 1fr;
+    
+        h2 {
+            margin-bottom: .5rem;
+        }
+        
+        img {
+            width: 100%;    
+        }
+    }
+    
+    .how_phones {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+    }
+    
+    .how_phone1, .how_phone3 {
+        display: block;
+        height: 25rem;
+        width: 13rem;
+    }
+    
+    .how_phone-middle {
+        height: 25rem;
+        width: 13rem;
+    }
+    
+    .how_text {
+        margin-top: .5rem;
+        max-width: 600px;
+    }
+}
+
+
+@media (min-width : 1200px) {
+    .page_how {
+        h2 {
+            size: 2.5rem;
+        }
+    }
+    
+    .how_phones {
+        width: 85%;
+        justify-content: space-between;
+    }
+    
+    .how_phone1, .how_phone3{
+        height: 41rem;
+    }
+    
+    .how_phone-middle {
+        height: 41rem;
+        width: 20.5rem;
+    }
+    
+    .how_t1 {
+        display: none;
+    }
+    
+    .how_t2 {
+        display: contents;
+    }
+}

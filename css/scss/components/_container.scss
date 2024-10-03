@@ -2,8 +2,8 @@
     width: 100%;
     margin-left: auto;
     margin-right: auto;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    // padding-left: 1rem;
+    // padding-right: 1rem;
 
     @include tablet {
         padding-left: 2rem;
@@ -13,4 +13,14 @@
     @include desktop {
         max-width: 1295px;
     }
+}
+
+.padding-rl {
+    padding-left: var(--container-padding);
+    padding-right: var(--container-padding);
+}
+
+.grid-center {
+    display: grid; 
+    place-items: center;
 }
