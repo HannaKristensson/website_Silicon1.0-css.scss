@@ -10,17 +10,3 @@ body {
 .background-clr {
     background-color: var(--color-gray100);
 }
-
-
-.darkmode {
-    background-color: var(--color-gray900);
-
-    .gradient {
-        background: rgb(99,102,241);
-        background: linear-gradient(0deg, rgba(99,102,241,0.1) 0%, rgba(218,70,239,0.05) 50%, rgba(19, 16, 35, 0.01) 83%);
-     }
-
-     .background-clr {
-        background-color: hsla(0, 0%, 100%, 0.07);
-    }
-}

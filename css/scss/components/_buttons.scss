@@ -107,16 +107,3 @@
     left: 50%;
     transform: translate(-50%, -47%);
 }
-
-//  Discover more
-.discover-btn {
-    gap: 1.5rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    @include desktop {
-            margin-top: 3rem;
-            padding-left: 1rem;
-    }
-}

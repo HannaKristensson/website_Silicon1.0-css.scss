@@ -9,7 +9,7 @@
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
-html, body, section, div, header, footer, main, aside, nav, blockquote, p, span {
+* {
   margin: 0;
   padding: 0;
 }
@@ -46,6 +46,151 @@ body {
   --transition-btn: all 0.15s;
 }
 
+.darkmode {
+  background-color: var(--color-gray900);
+}
+.darkmode .gradient {
+  background: rgb(99, 102, 241);
+  background: linear-gradient(0deg, rgba(99, 102, 241, 0.1) 0%, rgba(218, 70, 239, 0.05) 50%, rgba(19, 16, 35, 0.01) 83%);
+}
+.darkmode .background-clr {
+  background-color: hsla(0, 0%, 100%, 0.07);
+}
+.darkmode p, .darkmode h1, .darkmode h2, .darkmode h3, .darkmode h4, .darkmode h5 {
+  color: var(--color-white);
+}
+.darkmode .logo_dark {
+  display: none;
+}
+.darkmode .logo_light {
+  display: block;
+}
+.darkmode .appimg-light {
+  display: none;
+}
+.darkmode .appimg-dark {
+  display: block;
+}
+.darkmode .appbtn {
+  background-color: #EFF2FC;
+}
+.darkmode .appbtn:hover {
+  box-shadow: 0px 8px 18px -8px rgba(255, 255, 255, 0.5);
+}
+.darkmode .discover-btn p {
+  opacity: 70%;
+}
+.darkmode .discover-btn .img {
+  opacity: none;
+}
+.darkmode .btn_arrow {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+.darkmode .btn_arrow .arrow-dark {
+  display: none;
+}
+.darkmode .btn_arrow .arrow-light {
+  display: block;
+}
+.darkmode .btn_arrow:hover {
+  background-color: var(--color-primary);
+}
+.darkmode .btn_arrow:active {
+  background-color: #4f51d6;
+}
+.darkmode .page_features p {
+  color: rgba(255, 255, 255, 0.7);
+}
+.darkmode .feature_img {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+.darkmode .page_how p {
+  color: var(--color-breadtext);
+}
+.darkmode .page_transfer-receive li {
+  color: rgba(255, 255, 255, 0.7);
+}
+.darkmode .page_transfer-receive p {
+  color: rgba(255, 255, 255, 0.7);
+}
+.darkmode .review {
+  background-color: rgba(255, 255, 255, 0.04);
+}
+.darkmode .review h6 {
+  color: white;
+}
+.darkmode .question_text p {
+  color: var(--color-breadtext);
+}
+.darkmode .accordion label {
+  color: var(--color-white);
+  background-color: var(--txtclr-heading);
+  border-color: rgba(255, 255, 255, 0.15);
+}
+.darkmode .acc_content {
+  background-color: var(--txtclr-heading);
+  border-color: rgba(255, 255, 255, 0.15);
+}
+.darkmode .acc_content p {
+  color: rgba(255, 255, 255, 0.7);
+}
+.darkmode label::after {
+  background-color: rgba(255, 255, 255, 0.05);
+  color: white;
+}
+.darkmode .questions_call-txt {
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+.darkmode .questions_call-txt p {
+  color: var(--color-gray700);
+}
+.darkmode .page_news {
+  background-color: rgba(255, 255, 255, 0.04);
+}
+.darkmode .Subscribe_input {
+  background-color: rgba(255, 255, 255, 0.02);
+  border-color: rgba(255, 255, 255, 0.18);
+  /* opacity: 40%;  */
+}
+.darkmode input[type=email]:focus {
+  color: rgba(255, 255, 255, 0.7);
+}
+.darkmode footer p {
+  color: var(--color-gray600);
+}
+@media (min-width: 768px) {
+  .darkmode .maintext p {
+    color: var(--color-breadtext);
+  }
+  .darkmode .brand-box {
+    background-color: var(--txtclr-heading);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+  }
+  .darkmode .accordion label {
+    background-color: rgba(255, 255, 255, 0.04);
+  }
+  .darkmode .accordion input:checked + label {
+    border-radius: 8px 8px 0px 0px;
+  }
+  .darkmode .accordion_box {
+    border-radius: 0;
+  }
+  .darkmode .acc_content {
+    background-color: rgba(255, 255, 255, 0.04);
+  }
+}
+@media (min-width: 1200px) {
+  .darkmode .maintext p {
+    color: rgba(255, 255, 255, 0.7);
+  }
+  .darkmode .page_features p {
+    color: rgba(255, 255, 255, 0.5);
+  }
+  .darkmode .page_how p {
+    color: rgba(255, 255, 255, 0.7);
+  }
+}
+
 :root {
   --color-dark: #0B0F19;
   --color-primary: #6366F1;
@@ -80,6 +225,21 @@ body {
   border-color: var(--color-primary);
 }
 .btn-pri:active {
+  background-color: var(--color-primary-active);
+}
+
+.btn-dark {
+  background-color: var(--color-dark-btn);
+  color: var(--color-gray800);
+  border-color: var(--color-primary);
+  -webkit-tap-highlight-color: transparent;
+}
+.btn-dark:hover {
+  background-color: var(--color-white);
+  color: var(.btn-dark:hover hover-text-color);
+  border-color: var(--color-primary);
+}
+.btn-dark:active {
   background-color: var(--color-primary-active);
 }
 
@@ -197,10 +357,6 @@ input::placeholder {
   font-size: --fontsize-16;
 }
 
-.darkmode p, .darkmode h1, .darkmode h2, .darkmode h3, .darkmode h4, .darkmode h5 {
-  color: var(--color-white);
-}
-
 @media (min-width: 768px) {
   .label {
     color: var(--color-gray700);
@@ -225,17 +381,6 @@ body {
 
 .background-clr {
   background-color: var(--color-gray100);
-}
-
-.darkmode {
-  background-color: var(--color-gray900);
-}
-.darkmode .gradient {
-  background: rgb(99, 102, 241);
-  background: linear-gradient(0deg, rgba(99, 102, 241, 0.1) 0%, rgba(218, 70, 239, 0.05) 50%, rgba(19, 16, 35, 0.01) 83%);
-}
-.darkmode .background-clr {
-  background-color: hsla(0, 0%, 100%, 0.07);
 }
 
 .container {
@@ -417,25 +562,11 @@ a[target=_blank]::after {
   transform: translate(-50%, -47%);
 }
 
-.discover-btn {
-  gap: 1.5rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-@media (min-width: 1200px) {
-  .discover-btn {
-    margin-top: 3rem;
-    padding-left: 1rem;
-  }
-}
-
 p {
   font-family: "Manrope", sans-serif;
   font-weight: 400;
   font-style: normal;
   font-optical-sizing: auto;
-  padding-bottom: 1em;
 }
 
 .p18 {
@@ -591,12 +722,15 @@ header .container {
 .page-one {
   display: grid;
   grid-template-areas: "title" "maintext" "applink" "btn";
-  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-rows: repeat(4, 1fr);
 }
 .page-one div {
   max-width: 500px;
   margin-left: auto;
   margin-right: auto;
+}
+.page-one a[target=_blank]::after {
+  content: none;
 }
 
 .title {
@@ -631,7 +765,12 @@ header .container {
 }
 
 .appbtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 0.5rem;
+  height: -moz-fit-content;
+  height: fit-content;
   width: 100%;
   background-color: var(--txtclr-heading);
   border-radius: 0.5rem;
@@ -647,6 +786,19 @@ header .container {
 
 .appimg-dark {
   display: none;
+}
+
+.discover-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+@media (min-width: 1200px) {
+  .discover-btn {
+    margin-top: 3rem;
+    padding-left: 1rem;
+  }
 }
 
 @media (min-width: 768px) {

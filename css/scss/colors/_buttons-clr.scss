@@ -2,9 +2,9 @@
     @include button-colors (--color-primary, --color-white, --color-transparent, --color-primary, --color-primary, --color-primary, --color-primary-active);
 }
 
-// .btn-dark {
-//     @include button-colors (--color-dark-btn, --color-gray800, --color-white, --color-primary, --color-primary, --color-primary, --color-primary-active);
-// }
+.btn-dark {
+    @include button-colors (--color-dark-btn, --color-gray800, --color-white, --color-primary, --color-primary, --color-primary, --color-primary-active);
+}
 
 .btn-mobile {
     background-color: transparent;
