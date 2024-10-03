@@ -25,7 +25,7 @@
 
 .btn-toggle-switch .label {
     display: none;
-    @media tablet {
+    @include tablet {
         display: inline-block;
     }
 }

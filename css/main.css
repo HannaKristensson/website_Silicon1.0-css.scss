@@ -476,7 +476,7 @@ a[target=_blank]::after {
 .btn-toggle-switch .label {
   display: none;
 }
-@media tablet {
+@media (min-width: 768px) {
   .btn-toggle-switch .label {
     display: inline-block;
   }

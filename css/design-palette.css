@@ -7,3 +7,9 @@
     gap: 2rem;
     width: 100%;
 }
+
+@media (min-width: 1200px) {
+    .btn-mobile {
+        display: block;
+    }
+}
