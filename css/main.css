@@ -1101,4 +1101,72 @@ header .container {
   .page_transfer-receive {
     display: block;
   }
+}
+.page_reviews {
+  display: none;
+  margin-top: 6.5rem;
+  margin-bottom: 6.5rem;
+  text-align: left;
+  gap: 1.5rem;
+  justify-content: space-between;
+}
+.page_reviews h2 {
+  max-width: 300px;
+  margin-right: 6rem;
+}
+
+.review {
+  display: grid;
+  grid-template-rows: 1fr auto 1fr;
+  height: 330px;
+  width: 415px;
+  border-radius: 8px;
+  padding: 1.5rem;
+  align-items: center;
+  justify-content: center;
+  line-height: 1.7rem;
+  background-color: white;
+  box-shadow: 0 2px 6.4px -1px hsla(250, 36%, 10%, 0.03);
+  box-shadow: 0 4.4px 12px hsla(250, 36%, 10%, 0.06);
+  justify-content: center;
+  position: relative;
+}
+
+.review_comma {
+  display: flex;
+  width: 44px;
+  aspect-ratio: 1;
+  border-radius: 6px;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-primary);
+  box-shadow: 0 8px 18px -8px hsla(239, 84%, 67%, 0.9);
+  position: absolute;
+  top: -1.7rem;
+}
+.review_comma img {
+  height: 1.25rem;
+}
+
+.review_stars img {
+  height: 1rem;
+}
+
+.review_avatar {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.review_avatar p {
+  font-size: var(--fontsize-14);
+  color: var(--color-gray600);
+}
+.review_avatar img {
+  height: 3rem;
+}
+
+@media (min-width: 1200px) {
+  .page_reviews {
+    display: flex;
+  }
 }/*# sourceMappingURL=main.css.map */
