@@ -1,4 +1,4 @@
-/* PAGE ONE */
+// PAGE ONE
 .page-one {
     display: grid;
     grid-template-areas: 
@@ -24,15 +24,28 @@
     display: none;
 }
 
-/* title & maintext */
+// title & maintext 
 .maintext_2 {
     display: none;
 }
 
-/* app buttons */
+// app buttons
 .applink {
+    @include grid-center;
     gap: 1rem;
     width: 100%;
+}
+
+.appbtn {
+    padding: .5rem;
+    width: 100%;
+    background-color: var(--txtclr-heading);
+    border-radius: .5rem;
+    transition: 0.2s;
+
+    &:hover {
+        box-shadow: 0px 8px 18px -8px var(--txtclr-heading);
+    }
 }
 
 .appimg-light, .appimg-dark {
@@ -44,56 +57,46 @@
 }
 
 @media ( min-width: 768px ) {
-.page-one {
-    height:80svh;
-    gap: 2rem;
-    overflow: hidden;
-    grid-template-columns: 1fr auto;
-    grid-template-areas: 
-    "title title"
-    "maintext p1_img"
-    "applink p1_img"
-    "btn p1_img";
+    .page-one {
+        height:80svh;
+        gap: 2rem;
+        overflow: hidden;
+        grid-template-columns: 1fr auto;
+        grid-template-areas: 
+        "title title"
+        "maintext p1_img"
+        "applink p1_img"
+        "btn p1_img";
 
 
-    p {
-        text-align: left;
+        p {
+            text-align: left;
+        }
     }
+
+    .maintext {
+        margin-top: 4rem;
+    }
+
+    .maintext_1 {
+        display: none;
+    }
+
+    .maintext_2 {
+        display: block;
+    }
+
+    .page-one_img {
+        display:inline;
+        grid-area: p1_img;  
+    }
+
+    .img-front {
+        display: block;
+        right: 0;
+    }   
 }
 
-.maintext {
-    margin-top: 4rem;
-}
-
-.maintext_1 {
-    display: none;
-}
-
-.maintext_2 {
-    display: block;
-
-.page-one_img {
-    display:inline;
-    grid-area: p1_img;  
-}
-
-.img-front {
-    display: block;
-    right: 0;
-}
-}
-
-
-.page-one_img {
-    display:inline;
-    grid-area: p1_img;  
-}
-
-.img-front {
-    display: block;
-    right: 0;
-}
-}
 
 @media (min-width : 950px) {
 

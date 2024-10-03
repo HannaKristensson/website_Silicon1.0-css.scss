@@ -24,11 +24,7 @@ input::placeholder {
 
 .label {
     color: var(--txtclr-heading);
-    font-size: (--fontsize-16);
-
-    @include desktop {
-        color: var(--color-gray700);
-    }    
+    font-size: (--fontsize-16); 
 }
 
 
@@ -37,6 +33,13 @@ input::placeholder {
     p, h1, h2, h3, h4, h5{
         color: var(--color-white)}
 }
+
+@media ( min-width: 768px ) {
+    .label {
+        color: var(--color-gray700);
+    }
+}
+    
 
 @media (min-width : 1200px) {
     p {
