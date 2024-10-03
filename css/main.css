@@ -533,6 +533,61 @@ input::placeholder {
     font-size: 1.5rem;
   }
 }
+header .container {
+  display: grid;
+  align-items: center;
+  grid-template-columns: auto 3fr auto auto auto;
+  gap: 1.5rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.logo_light {
+  display: none;
+}
+
+.navbar {
+  display: none;
+}
+
+.sign-in {
+  display: none;
+  margin-right: 0.5rem;
+}
+.sign-in i {
+  margin-right: 0.3rem;
+}
+
+@media (min-width: 768px) {
+  .btn-toggle-switch .label {
+    display: inline-block;
+  }
+  .toggle-switch .slider.round {
+    box-shadow: none;
+  }
+  .toggle-switch input:focus + .slider {
+    box-shadow: none;
+  }
+  header .container {
+    grid-template-columns: auto 3fr auto auto auto;
+    gap: 3rem;
+  }
+}
+@media (min-width: 1200px) {
+  .navbar {
+    display: block;
+  }
+  header .container {
+    grid-template-columns: auto auto 3fr auto auto;
+    gap: 3rem;
+  }
+  #sign-in {
+    display: block;
+  }
+  .btn-mobile {
+    display: none;
+  }
+}
 .page-one {
   display: grid;
   grid-template-areas: "title" "maintext" "applink" "btn";
@@ -658,61 +713,6 @@ input::placeholder {
   }
   .page-one .appimg-light, .page-one .appimg-dark {
     max-height: 2.2rem;
-  }
-}
-header .container {
-  display: grid;
-  align-items: center;
-  grid-template-columns: auto 3fr auto auto auto;
-  gap: 1.5rem;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-}
-
-.logo_light {
-  display: none;
-}
-
-.navbar {
-  display: none;
-}
-
-.sign-in {
-  display: none;
-  margin-right: 0.5rem;
-}
-.sign-in i {
-  margin-right: 0.3rem;
-}
-
-@media (min-width: 768px) {
-  .btn-toggle-switch .label {
-    display: inline-block;
-  }
-  .toggle-switch .slider.round {
-    box-shadow: none;
-  }
-  .toggle-switch input:focus + .slider {
-    box-shadow: none;
-  }
-  header .container {
-    grid-template-columns: auto 3fr auto auto auto;
-    gap: 3rem;
-  }
-}
-@media (min-width: 1200px) {
-  .navbar {
-    display: block;
-  }
-  header .container {
-    grid-template-columns: auto auto 3fr auto auto;
-    gap: 3rem;
-  }
-  #sign-in {
-    display: block;
-  }
-  .btn-mobile {
-    display: none;
   }
 }
 .brands-container {
@@ -1378,5 +1378,120 @@ header .container {
   .accordion {
     grid-column: 2/4;
     grid-row: 1/5;
+  }
+}
+.page_news {
+  display: grid;
+  align-items: center;
+  text-align: left;
+  background-color: var(--color-gray100);
+  border-radius: 8px;
+  padding: 3rem 1rem;
+  gap: 2rem;
+  width: 100%;
+}
+
+.news_txt {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  gap: 1rem;
+  grid-column: 2/3;
+  grid-row: 1/2;
+}
+
+.news_txt_m {
+  display: block;
+}
+
+.news_txt_d {
+  display: none;
+}
+
+.Subscribe_box {
+  display: flex;
+  position: relative;
+  grid-column: 1/4;
+  grid-row: 2/3;
+}
+.Subscribe_box .btn_primary {
+  width: 7rem;
+  height: 3.25rem;
+  font-size: var(--fontsize-16);
+  border-radius: 0px 8px 8px 0px;
+  padding: 1rem;
+}
+
+input[type=email] {
+  width: 100%;
+  color: var(--color-gray700);
+  font-size: var(--fontsize-16);
+  font-family: fontAwesome, "Manrope", sans-serif;
+  border: 1px solid var(--color-gray400);
+  border-radius: 8px 0px 0px 8px;
+  outline: none;
+  transition: 0.3s;
+}
+
+input[type=email]:focus {
+  border: 1px solid hsla(239, 84%, 67%, 0.5);
+  box-shadow: 0px 8px 18px -8px hsla(239, 84%, 67%, 0.4);
+}
+
+.Subscribe_letter {
+  position: absolute;
+  top: 50%;
+  left: 1rem;
+  transform: translate(-50%, -50%);
+}
+
+.email {
+  padding-left: 1rem;
+}
+
+@media (min-width: 768px) {
+  .page_news {
+    grid-template-columns: 1fr 50%;
+    padding: 1.5rem;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+  .news_txt {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+  .Subscribe_box {
+    grid-column: 2/3;
+    grid-row: 1/2;
+  }
+}
+@media (min-width: 1200px) {
+  .page_news {
+    padding: 5rem 5rem;
+  }
+  .news_txt_m {
+    display: none;
+  }
+  .news_txt_d {
+    display: block;
+  }
+}
+footer {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+footer p {
+  font-size: var(--fontsize-14);
+  color: var(--color-gray600);
+}
+
+@media (min-width: 768px) {
+  footer {
+    justify-content: center;
+    flex-direction: row;
+    gap: 0.2rem;
   }
 }/*# sourceMappingURL=main.css.map */
