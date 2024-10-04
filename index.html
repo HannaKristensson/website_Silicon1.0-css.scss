@@ -486,7 +486,7 @@
 </section> 
 
 <!-- PAGE SEVEN - Newsletter -->
-<section class="container padding-rl">
+<section class="container padding-rl ">
     <div class="page_news">
         <div class="news_txt">
             <img src="images/news_bell.svg" alt="Yellow bell." class="">
@@ -495,14 +495,15 @@
         <h4 class="news_txt_d">Subscribe to our newsletter to stay informed about latest updates</h4>
         </div>
 <!-- Subscribe -->
-        <div class="Subscribe_box ">
-            <input class="Subscribe_input email" type="email" placeholder="&#xf0e0   Your email ">
+        <form class="Subscribe_box" action="" method="get">
+            <input class="Subscribe_input email" type="email" name="email" id="email" required placeholder="&#xf0e0   Your email">
             <button class="btn_primary btn-pri">Subscribe</button>
-        </div>
+        </form>
     </div>
 </section>
 </main>
 
+<!-- Footer -->
 <footer class="container padding-rl">
         <p>© 2024 Silicon. All rights reserved.</p>
         <p>Credit MadrasThemes</p>

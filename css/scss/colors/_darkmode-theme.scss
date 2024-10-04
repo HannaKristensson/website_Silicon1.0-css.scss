@@ -1,5 +1,5 @@
+// DARKMODE
 .darkmode {
-
     background-color: var(--color-gray900);
 
     .gradient {
@@ -22,6 +22,10 @@
     
     .logo_light {
         display: block;
+    }
+
+    .btn-mobile {
+        color: var(--color-white)
     }
 
     // PAGE ONE

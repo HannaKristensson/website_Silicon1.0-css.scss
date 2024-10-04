@@ -17,6 +17,9 @@
 .darkmode .logo_light {
   display: block;
 }
+.darkmode .btn-mobile {
+  color: var(--color-white);
+}
 .darkmode .appimg-light {
   display: none;
 }
