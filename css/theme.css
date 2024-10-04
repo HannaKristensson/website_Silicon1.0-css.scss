@@ -309,16 +309,14 @@ input::placeholder {
   font-size: --fontsize-16;
 }
 
-@media (min-width: 768px) {
-  .label {
-    color: var(--color-gray700);
-  }
-}
 @media (min-width: 1200px) {
   p {
     color: var(--color-gray700);
   }
   li {
+    color: var(--color-gray700);
+  }
+  .label {
     color: var(--color-gray700);
   }
 }

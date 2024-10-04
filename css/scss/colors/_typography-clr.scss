@@ -26,14 +26,7 @@ input::placeholder {
     color: var(--txtclr-heading);
     font-size: (--fontsize-16); 
 }
-
-
-@media ( min-width: 768px ) {
-    .label {
-        color: var(--color-gray700);
-    }
-}
-    
+  
 
 @media (min-width : 1200px) {
     p {
@@ -41,6 +34,10 @@ input::placeholder {
     }
     
     li {
+        color: var(--color-gray700);
+    }
+
+    .label {
         color: var(--color-gray700);
     }
  }

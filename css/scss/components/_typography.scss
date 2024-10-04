@@ -1,5 +1,6 @@
 p {
     @include text;
+    font-size: var(--fontsize-18);
 }
 
 .p18 {
