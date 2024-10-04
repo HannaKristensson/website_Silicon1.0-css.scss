@@ -213,21 +213,6 @@ body {
   --color-transparent: transparent;
 }
 
-.btn-pri {
-  background-color: var(--color-primary);
-  color: var(--color-white);
-  border-color: var(--color-primary);
-  -webkit-tap-highlight-color: transparent;
-}
-.btn-pri:hover {
-  background-color: var(--color-transparent);
-  color: var(.btn-pri:hover hover-text-color);
-  border-color: var(--color-primary);
-}
-.btn-pri:active {
-  background-color: var(--color-primary-active);
-}
-
 .btn-dark {
   background-color: var(--color-dark-btn);
   color: var(--color-gray800);
@@ -236,7 +221,7 @@ body {
 }
 .btn-dark:hover {
   background-color: var(--color-white);
-  color: var(.btn-dark:hover hover-text-color);
+  color: var(--color-primary);
   border-color: var(--color-primary);
 }
 .btn-dark:active {
@@ -290,24 +275,6 @@ body {
 }
 .btn_arrow:active {
   background-color: #4f51d6;
-}
-
-.darkmode .btn-pri {
-  background-color: var(--color-primary);
-  color: var(--color-white);
-  border-color: var(--color-primary);
-  -webkit-tap-highlight-color: transparent;
-}
-.darkmode .btn-pri:hover {
-  background-color: var(--color-transparent);
-  color: var(.darkmode .btn-pri:hover hover-text-color);
-  border-color: var(--color-primary);
-}
-.darkmode .btn-pri:active {
-  background-color: var(--color-dark-active);
-}
-.darkmode .btn-pri .btn-mobile {
-  color: var(--color-white);
 }
 
 a {
@@ -442,10 +409,22 @@ a[target=_blank]::after {
   font-weight: 500;
   transition: 0.2s;
   cursor: pointer;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  border-color: var(--color-primary);
+  -webkit-tap-highlight-color: transparent;
 }
 .btn_primary:hover {
   transition: 0.2s;
   text-decoration: none;
+}
+.btn_primary:hover {
+  background-color: var(--color-transparent);
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+.btn_primary:active {
+  background-color: var(--color-primary-active);
 }
 
 .btn-mobile {
@@ -1427,7 +1406,7 @@ header .container {
   gap: 1.5rem;
   justify-content: space-between;
 }
-.questions_contact p {
+.questions_contact p, .questions_contact a {
   font-size: var(--fontsize-14);
   color: var(--color-gray700);
 }
@@ -1451,10 +1430,10 @@ header .container {
   width: 100%;
   gap: 1.2rem;
 }
-.questions_call-txt nav {
+.questions_call-txt a {
   color: var(--color-primary);
 }
-.questions_call-txt nav:hover {
+.questions_call-txt a:hover {
   cursor: pointer;
   text-decoration: underline;
 }
@@ -1462,7 +1441,10 @@ header .container {
   height: 1.75rem;
 }
 
-.questions_txt nav {
+.questions_txt a {
+  color: var(--color-success);
+}
+.questions_txt a:hover {
   color: var(--color-success);
 }
 

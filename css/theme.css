@@ -165,21 +165,6 @@
   --color-transparent: transparent;
 }
 
-.btn-pri {
-  background-color: var(--color-primary);
-  color: var(--color-white);
-  border-color: var(--color-primary);
-  -webkit-tap-highlight-color: transparent;
-}
-.btn-pri:hover {
-  background-color: var(--color-transparent);
-  color: var(.btn-pri:hover hover-text-color);
-  border-color: var(--color-primary);
-}
-.btn-pri:active {
-  background-color: var(--color-primary-active);
-}
-
 .btn-dark {
   background-color: var(--color-dark-btn);
   color: var(--color-gray800);
@@ -188,7 +173,7 @@
 }
 .btn-dark:hover {
   background-color: var(--color-white);
-  color: var(.btn-dark:hover hover-text-color);
+  color: var(--color-primary);
   border-color: var(--color-primary);
 }
 .btn-dark:active {
@@ -242,24 +227,6 @@
 }
 .btn_arrow:active {
   background-color: #4f51d6;
-}
-
-.darkmode .btn-pri {
-  background-color: var(--color-primary);
-  color: var(--color-white);
-  border-color: var(--color-primary);
-  -webkit-tap-highlight-color: transparent;
-}
-.darkmode .btn-pri:hover {
-  background-color: var(--color-transparent);
-  color: var(.darkmode .btn-pri:hover hover-text-color);
-  border-color: var(--color-primary);
-}
-.darkmode .btn-pri:active {
-  background-color: var(--color-dark-active);
-}
-.darkmode .btn-pri .btn-mobile {
-  color: var(--color-white);
 }
 
 a {

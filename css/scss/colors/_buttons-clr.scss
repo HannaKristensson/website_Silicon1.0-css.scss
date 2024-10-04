@@ -1,4 +1,4 @@
-.btn-pri {
+@mixin btn-pri {
     @include button-colors (--color-primary, --color-white, --color-transparent, --color-primary, --color-primary, --color-primary, --color-primary-active);
 }
 
@@ -61,11 +61,9 @@
 
 
 
-
-
-
+// Darkmode
 .darkmode {
-    .btn-pri {
+    @mixin btn-pri {
         @include button-colors (--color-primary, --color-white, --color-transparent, --color-primary, --color-primary, --color-primary, --color-dark-active);
 
         .btn-mobile {
@@ -73,7 +71,3 @@
         }
     }
 }
-
-// .btn-menu {
-
-// }
