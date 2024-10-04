@@ -21,10 +21,13 @@
     }
 }
 
-.title { grid-area: title;}
-.maintext {grid-area: maintext;}
 .applink {grid-area: applink;}
 .discover-btn {grid-area: btn;}
+.maintext {grid-area: maintext;
+    @include line18;
+}
+.title { grid-area: title;
+    @include grid-center;}
 
 .page-one_img{
     display: none;

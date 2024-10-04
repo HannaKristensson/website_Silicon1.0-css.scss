@@ -19,11 +19,3 @@
         text-decoration: none;
     }
 }
-
-
-
-// Kan användas på detta sätt:
-// a {
-//     @include btn;
-    // @include button-colors(-color, -color, -bg-color, -text-color, -color, -border-color);
-// }

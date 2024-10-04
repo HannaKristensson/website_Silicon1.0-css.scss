@@ -177,6 +177,19 @@
 
 @media ( min-width: 768px ) {
     .page_question {
+        // @include grid-center;
+
+        // .question_text {
+        //     grid-column: 1/2;
+        //     grid-row: 1/2;}
+        // .questions_contact {
+        //     grid-column: 1/2;
+        //     grid-row: 3/4;}
+        // .accordion {
+        //     grid-column: 1/2;
+        //     grid-row: 2/3;}
+
+
         h2 {
             color: var(--color-gray900);
         }

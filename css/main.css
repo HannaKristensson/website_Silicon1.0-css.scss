@@ -153,7 +153,6 @@ body {
 .darkmode .Subscribe_input {
   background-color: rgba(255, 255, 255, 0.02);
   border-color: rgba(255, 255, 255, 0.18);
-  /* opacity: 40%;  */
 }
 .darkmode input[type=email]:focus {
   color: rgba(255, 255, 255, 0.7);
@@ -373,11 +372,6 @@ body {
   }
 }
 
-.grid-center {
-  display: grid;
-  place-items: center;
-}
-
 a {
   font-family: "Manrope", sans-serif;
   font-weight: 400;
@@ -550,21 +544,6 @@ p {
   font-size: var(--fontsize-18);
 }
 
-.p18 {
-  line-height: 1.8rem;
-  font-size: 1.125rem;
-}
-
-.p16 {
-  line-height: 1.6rem;
-  font-size: 1rem;
-}
-
-.p14 {
-  line-height: 1.4rem;
-  font-size: 0.875rem;
-}
-
 h1, h2, h3, h4, h5, h6 {
   font-family: "Manrope", sans-serif;
   font-weight: 400;
@@ -622,7 +601,7 @@ input::placeholder {
 
 @media (min-width: 768px) {
   h1 {
-    font-size: 2.75rem;
+    font-size: 2.75em;
   }
   h2 {
     font-size: 2rem;
@@ -631,18 +610,18 @@ input::placeholder {
     font-size: 2em;
   }
   h4 {
-    font-size: 1.4rem;
+    font-size: 1.4em;
   }
 }
 @media (min-width: 1200px) {
   h1 {
-    font-size: 3.5rem;
+    font-size: 3.5em;
   }
   h2 {
-    font-size: 2.5rem;
+    font-size: 2.5em;
   }
   h4 {
-    font-size: 1.5rem;
+    font-size: 1.5em;
   }
 }
 header .container {
@@ -714,20 +693,23 @@ header .container {
   content: none;
 }
 
-.title {
-  grid-area: title;
-}
-
-.maintext {
-  grid-area: maintext;
-}
-
 .applink {
   grid-area: applink;
 }
 
 .discover-btn {
   grid-area: btn;
+}
+
+.maintext {
+  grid-area: maintext;
+  line-height: 1.8rem;
+}
+
+.title {
+  grid-area: title;
+  display: grid;
+  align-items: center;
 }
 
 .page-one_img {
@@ -913,6 +895,14 @@ header .container {
   font-size: var(--fontsize-16);
 }
 
+.app-feature_text {
+  line-height: 1.8rem;
+}
+
+.feature_text {
+  line-height: 1.6rem;
+}
+
 .feature_img {
   display: flex;
   justify-content: center;
@@ -1014,11 +1004,12 @@ header .container {
   }
 }
 .page_how {
+  display: grid;
+  align-items: center;
   position: grid;
   padding-top: 4rem;
   padding-bottom: 4rem;
-  justify-content: center;
-  align-items: center;
+  place-items: center;
   grid-template-columns: 1fr;
   grid-template-rows: auto 1fr auto;
   gap: 2rem;
@@ -1056,6 +1047,9 @@ header .container {
   width: 17rem;
 }
 
+.how_text {
+  line-height: 1.6rem;
+}
 .how_text h4 {
   margin-left: 3rem;
   margin-right: 3rem;
@@ -1195,6 +1189,7 @@ header .container {
 }
 
 .receive_txt {
+  line-height: 1.6rem;
   display: flex;
   flex-direction: row;
   margin-bottom: 2.5rem;

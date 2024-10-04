@@ -1,10 +1,10 @@
 // PAGE THREE - HOW DOES IT WORK
 .page_how {
+    @include grid-center;
     position: grid;
     padding-top: 4rem;
     padding-bottom: 4rem;
-    justify-content: center;
-    align-items: center;
+    place-items: center;
 
     grid-template-columns: 1fr;
     grid-template-rows: auto 1fr auto;
@@ -43,6 +43,7 @@
 }
 
 .how_text {
+    @include line16;
     h4 {
         margin-left: 3rem;
         margin-right: 3rem;

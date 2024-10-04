@@ -3,21 +3,6 @@ p {
     font-size: var(--fontsize-18);
 }
 
-.p18 {
-    line-height: 1.8rem;
-    font-size: 1.125rem;
-}
-
-.p16 {
-    line-height: 1.6rem;
-    font-size: 1rem;
-}
-
-.p14 {
-    line-height: 1.4rem;
-    font-size: 0.875rem;
-}
-
 h1, h2, h3, h4, h5, h6 {
     @include heading;
     margin-top: 0;
@@ -27,12 +12,10 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
     font-size: 2.5em;
-    
 }
 
 h2 {
     font-size: 1.8em;
-    // line-height: 2.26rem;
 }
 
 h3 {
@@ -71,7 +54,7 @@ input::placeholder {
 
 @media ( min-width: 768px ) {
     h1 {
-        font-size: 2.75rem;
+        font-size: 2.75em;
     }
 
     h2 {
@@ -83,20 +66,20 @@ input::placeholder {
     }
 
     h4 {
-        font-size: 1.4rem;
+        font-size: 1.4em;
     }
 }
 
 @media (min-width : 1200px) {
     h1 {
-        font-size: 3.5rem; 
+        font-size: 3.5em; 
     }
     
     h2 {
-        font-size: 2.5rem;
+        font-size: 2.5em;
     }
     
     h4 {
-        font-size: 1.5rem;
+        font-size: 1.5em;
     }
 }

@@ -29,6 +29,14 @@
     }
 }
 
+.app-feature_text {
+    @include line18;
+}
+
+.feature_text {
+    @include line16;
+}
+
 .feature_img {
     display: flex;
     justify-content: center;

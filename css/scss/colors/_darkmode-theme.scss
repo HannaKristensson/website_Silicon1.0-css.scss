@@ -11,8 +11,9 @@
         background-color: hsla(0, 0%, 100%, 0.07);
     }
 
-    p, h1, h2, h3, h4, h5{
-        color: var(--color-white)}
+    p, h1, h2, h3, h4, h5 {
+        color: var(--color-white);
+    }
 
 
     // HEADER
@@ -156,9 +157,7 @@
     .Subscribe_input {
         background-color: rgba(255, 255, 255, 0.02);
         border-color: rgba(255, 255, 255, 0.18);
-        /* opacity: 40%;  */
     }
-
 
     input[type=email]:focus {
         color: rgba(255, 255, 255, 0.7);
@@ -173,40 +172,41 @@
 
 
     @media ( min-width: 768px ) {
-    // PAGE ONE
-    .maintext {
-        p {
-            color: var(--color-breadtext);
+        // PAGE ONE
+        .maintext {
+            p {
+                color: var(--color-breadtext);
+            }
         }
-    }
 
-    // BRANDBOX
-    .brand-box {
-        background-color: var(--txtclr-heading);
-        border: 1px solid rgba(255, 255, 255, 0.15);
-    }
-    
-    // PAGE SEVEN
-    .accordion {
-        label {
-            background-color: rgba(255, 255, 255, 0.04);
+        // BRANDBOX
+        .brand-box {
+            background-color: var(--txtclr-heading);
+            border: 1px solid rgba(255, 255, 255, 0.15);
         }
-        input:checked + label  {
-            border-radius: 8px 8px 0px 0px;
+        
+        // PAGE SEVEN
+        .accordion {
+            label {
+                background-color: rgba(255, 255, 255, 0.04);
+            }
+            input:checked + label  {
+                border-radius: 8px 8px 0px 0px;
+                
+            }
+        }
+        
+        .accordion_box {
+            border-radius: 0;
+        }
+        
+        .acc_content {
+            background-color: rgba(255, 255, 255, 0.04);
             
         }
-    }
-    
-    .accordion_box {
-        border-radius: 0;
-    }
-    
-    .acc_content {
-        background-color: rgba(255, 255, 255, 0.04);
-        
-    }
     
     }
+    
     
     @media (min-width : 1200px) {
         .maintext {
